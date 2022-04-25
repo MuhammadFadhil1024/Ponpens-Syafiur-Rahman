@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\DivisionGalleryController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\FacilityGalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,10 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
             'index', 'create', 'store', 'destroy'
         ]);
         Route::resource('user', UserController::class);
+        Route::resource('facility', FacilityController::class);
+        Route::resource('facility.facilitygallery', FacilityGalleryController::class)->shallow()->only([
+            'index', 'create', 'store', 'destroy'
+        ]);
     });
 });
 
