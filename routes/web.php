@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
@@ -43,6 +44,10 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
         Route::resource('facility.facilitygallery', FacilityGalleryController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
+    });
+
+    Route::middleware(['santri'])->group(function () {
+        Route::resource('article', ArticleController::class);
     });
 });
 

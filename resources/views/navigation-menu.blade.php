@@ -30,6 +30,12 @@
                     </x-jet-nav-link>
                         
                     @endif
+
+                    @if (Auth::user()->roles == 'SANTRI')
+                    <x-jet-nav-link href="{{ route('dashboard.article.index') }}" :active="request()->routeIs('dashboard.event.index')">
+                        {{ __('Articles') }}
+                    </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 
