@@ -47,6 +47,7 @@
                                 <option value="">--------------</option>
                                 <option value="USER">USER</option>
                                 <option value="ADMIN">ADMIN</option>
+                                <option value="SANTRI">SANTRI</option>
                             </select>
                         </div>
                     </div>
