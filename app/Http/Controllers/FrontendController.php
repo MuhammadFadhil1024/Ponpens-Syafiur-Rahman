@@ -10,4 +10,9 @@ class FrontendController extends Controller
     {
         return view('pages.frontend.index');
     }
+
+    public function profil(Request $request)
+    {
+        return view('pages.frontend.profil');
+    }
 }
