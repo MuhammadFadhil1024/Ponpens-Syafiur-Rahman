@@ -38,26 +38,8 @@
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="courses.html">Profil</a></li>
           <li><a href="teachers.html">Event</a></li>
-          <li><a href="events.html">Article</a></li>
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Divisi</a>
-            <ul class="dropdown-menu">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="course-single.html">Course Single</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li class="dropdown-submenu dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Second Level Menu</a></li>
-                  <li><a href="#">Second Level Menu</a></li>
-                  <li><a href="#">Second Level Menu</a></li>
-                  <li><a href="#">Second Level Menu</a></li>
-                </ul>
-              </li>
-              <li><a href="news.html">News</a></li>
-            </ul>
-          </li>
+          <li><a href="events.html">Divisi</a></li>
+          <li><a href="events.html">Artikel</a></li>
           <li><a href="contact.html">Daftar</a></li>
         </ul>
       </div>

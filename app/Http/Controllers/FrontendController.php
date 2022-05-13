@@ -15,4 +15,19 @@ class FrontendController extends Controller
     {
         return view('pages.frontend.profil');
     }
+
+    public function events(Request $request)
+    {
+        return view('pages.frontend.events');
+    }
+
+    public function divisi(Request $request)
+    {
+        return view('pages.frontend.divisi');
+    }
+
+    public function artikel(Request $request)
+    {
+        return view('pages.frontend.artikel');
+    }
 }

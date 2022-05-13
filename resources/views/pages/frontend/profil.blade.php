@@ -54,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-          <h2>Meet Our Qualified Teachers</h2>
+          <h2>Pengasuh Pondok Pesantren</h2>
           <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
         </div>
       </div>
