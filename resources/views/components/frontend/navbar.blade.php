@@ -8,9 +8,9 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
           <ul>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-facebook2"></i></a></li>
-            <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            <li><a href="#"><i class="icon-whatsapp"></i></a></li>
+            <li><a href="#"><i class="icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-instagram"></i></a></li>
             <li><a href="#"><i class="icon-youtube"></i></a></li>
             <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
           </ul>
@@ -35,7 +35,7 @@
 
       <div id="navbar-collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="{{ url('index') }}">Home</a></li>
+          <li class="active"><a href="{{ url('/') }}">Home</a></li>
           <li><a href="{{ url('profil') }}">Profil</a></li>
           <li><a href="{{ url('event') }}">Event</a></li>
           <li><a href="{{ url('divisi') }}">Divisi</a></li>

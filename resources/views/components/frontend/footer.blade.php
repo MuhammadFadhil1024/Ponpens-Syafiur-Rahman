@@ -7,11 +7,9 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
             <h3>Social</h3>
             <ul class="probootstrap-footer-social">
-              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-whatsapp"></i></a></li>
               <li><a href="#"><i class="icon-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-github"></i></a></li>
-              <li><a href="#"><i class="icon-dribbble"></i></a></li>
-              <li><a href="#"><i class="icon-linkedin"></i></a></li>
+              <li><a href="#"><i class="icon-instagram"></i></a></li>
               <li><a href="#"><i class="icon-youtube"></i></a></li>
             </ul>
           </div>
@@ -20,11 +18,11 @@
           <div class="probootstrap-footer-widget">
             <h3>Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">Teachers</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="{{ url('/') }}">Home</a></li>
+              <li><a href="{{ url('event') }}">Event</a></li>
+              <li><a href="{{ url('divisi') }}">Divisi</a></li>
+              <li><a href="{{ url('artikel') }}">Artikel</a></li>
+              <li><a href="#">Daftar</a></li>
             </ul>
           </div>
         </div>
@@ -32,9 +30,9 @@
           <div class="probootstrap-footer-widget">
             <h3>Contact Info</h3>
             <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-              <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-              <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+              <li><i class="icon-location2"></i> <span>Jl. Brantas No.25, Krajan Timur, Sumbersari, Jember</span></li>
+              <li><i class="icon-mail"></i><span>ppmsrjember@gmail.com</span></li>
+              <li><i class="icon-phone2"></i><span>+62 823-3835-0709</span></li>
             </ul>
           </div>
         </div>
