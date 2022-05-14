@@ -16,9 +16,9 @@ class FrontendController extends Controller
         return view('pages.frontend.profil');
     }
 
-    public function events(Request $request)
+    public function event(Request $request)
     {
-        return view('pages.frontend.events');
+        return view('pages.frontend.event');
     }
 
     public function divisi(Request $request)

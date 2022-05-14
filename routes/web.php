@@ -25,7 +25,7 @@ use App\Http\Controllers\FrontendController;
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/profil', [FrontendController::class, 'profil'])->name('profil');
-Route::get('/events', [FrontendController::class, 'events'])->name('events');
+Route::get('/event', [FrontendController::class, 'event'])->name('event');
 Route::get('/divisi', [FrontendController::class, 'divisi'])->name('divisi');
 Route::get('/artikel', [FrontendController::class, 'artikel'])->name('artikel');
 

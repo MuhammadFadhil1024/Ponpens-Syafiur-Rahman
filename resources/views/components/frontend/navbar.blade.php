@@ -35,11 +35,11 @@
 
       <div id="navbar-collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Profil</a></li>
-          <li><a href="teachers.html">Event</a></li>
-          <li><a href="events.html">Divisi</a></li>
-          <li><a href="events.html">Artikel</a></li>
+          <li class="active"><a href="{{ url('index') }}">Home</a></li>
+          <li><a href="{{ url('profil') }}">Profil</a></li>
+          <li><a href="{{ url('event') }}">Event</a></li>
+          <li><a href="{{ url('divisi') }}">Divisi</a></li>
+          <li><a href="{{ url('artikel') }}">Artikel</a></li>
           <li><a href="contact.html">Daftar</a></li>
         </ul>
       </div>
