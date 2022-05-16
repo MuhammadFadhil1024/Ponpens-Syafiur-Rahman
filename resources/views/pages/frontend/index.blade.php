@@ -224,7 +224,7 @@
                   <div class="owl-carousel" id="owl2">
                     <div class="item">
                       <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="img/img_sm_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                         <div class="probootstrap-text">
                           <h3>Tempora consectetur unde nisi</h3>
                           <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
@@ -246,7 +246,7 @@
                     <!-- END item -->
                     <div class="item">
                       <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="img/img_sm_2.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg')}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                         <div class="probootstrap-text">
                           <h3>Tempora consectetur unde nisi</h3>
                           <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
@@ -363,7 +363,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-          <h2>Meet Our Qualified Teachers</h2>
+          <h2>Pengasuh Pondok Pesantren</h2>
           <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
         </div>
       </div>
@@ -552,15 +552,5 @@
     </div>
   </section>
 
-  <section class="probootstrap-cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Get your admission now!</h2>
-          <a href="#" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
 @endsection
