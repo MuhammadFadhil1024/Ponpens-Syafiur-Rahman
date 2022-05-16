@@ -23,7 +23,7 @@
               <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
               <h3>Application Design</h3>
               <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p>
+              <p><a href="{{ url('detail artikal') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@
               <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
               <h3>Chemical Engineering</h3>
               <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p>
+              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p>
             </div>
           </div>
 
@@ -53,7 +53,7 @@
               <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
               <h3>Math Major</h3>
               <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p>
+              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p>
             </div>
           </div>
 
@@ -67,7 +67,7 @@
               <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
               <h3>English Major</h3>
               <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p>
+              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p>
             </div>
           </div>
 
