@@ -142,8 +142,8 @@
     </div>
     <div class="probootstrap-tab-style-1">
       <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border">
-        <li class="active"><a data-toggle="tab" href="#featured-news">Featured News</a></li>
-        <li><a data-toggle="tab" href="#upcoming-events">Upcoming Events</a></li>
+        <li class="active"><a data-toggle="tab" href="#featured-news">Divisi PPM SR</a></li>
+        <li><a data-toggle="tab" href="#upcoming-events">Artikel PPM SR</a></li>
       </ul>
     </div>
   </section>

@@ -35,4 +35,9 @@ class FrontendController extends Controller
     {
         return view('pages.frontend.detailartikel');
     }
+
+    public function detailevent(Request $request)
+    {
+        return view('pages.frontend.detailevent');
+    }
 }

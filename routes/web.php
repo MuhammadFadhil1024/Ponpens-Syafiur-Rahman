@@ -29,6 +29,7 @@ Route::get('/event', [FrontendController::class, 'event'])->name('event');
 Route::get('/divisi', [FrontendController::class, 'divisi'])->name('divisi');
 Route::get('/artikel', [FrontendController::class, 'artikel'])->name('artikel');
 Route::get('/detailartikel', [FrontendController::class, 'detailartikel'])->name('detailartikel');
+Route::get('/detailevent', [FrontendController::class, 'detailevent'])->name('detailevent');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {
