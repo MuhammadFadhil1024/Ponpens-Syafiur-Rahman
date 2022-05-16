@@ -30,7 +30,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html" title="ProBootstrap:Enlight">PPM Syafi'ur Rohman</a>
+        <a class="navbar-brand" href="{{ url('/') }}" title="ProBootstrap:Enlight">PPM Syafi'ur Rohman</a>
       </div>
 
       <div id="navbar-collapse" class="navbar-collapse collapse">
