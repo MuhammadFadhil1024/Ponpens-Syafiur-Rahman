@@ -30,4 +30,9 @@ class FrontendController extends Controller
     {
         return view('pages.frontend.artikel');
     }
+
+    public function detailartikel(Request $request)
+    {
+        return view('pages.frontend.detailartikel');
+    }
 }
