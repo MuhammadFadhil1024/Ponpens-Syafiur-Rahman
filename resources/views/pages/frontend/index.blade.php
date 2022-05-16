@@ -45,7 +45,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-left section-heading probootstrap-animate">
-          <h2>Welcome to School of Excellence</h2>
+          <h2>Selamat Datang di PPM Syafi'ur Rohman</h2>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
         <div class="col-md-12">
           <div class="probootstrap-flex-block">
             <div class="probootstrap-text probootstrap-animate">
-              <h3>About School</h3>
+              <h3>Tentang Pondok Pesantren</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
               <p><a href="#" class="btn btn-primary">Learn More</a></p>
             </div>
@@ -83,7 +83,7 @@
               <span class="probootstrap-counter">
                 <span class="js-counter" data-from="0" data-to="20203" data-speed="5000" data-refresh-interval="50">1</span>
               </span>
-              <span class="probootstrap-counter-label">Students Enrolled</span>
+              <span class="probootstrap-counter-label">Santri PPM SR</span>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
               <span class="probootstrap-counter">
                 <span class="js-counter" data-from="0" data-to="139" data-speed="5000" data-refresh-interval="50">1</span>
               </span>
-              <span class="probootstrap-counter-label">Certified Teachers</span>
+              <span class="probootstrap-counter-label">Pengasuh Pondok</span>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
               <span class="probootstrap-counter">
                 <span class="js-counter" data-from="0" data-to="100" data-speed="5000" data-refresh-interval="50">1</span>%
               </span>
-              <span class="probootstrap-counter-label">Parents Satisfaction</span>
+              <span class="probootstrap-counter-label">Tingkat Kepuasan</span>
             </div>
           </div>
         </div>
