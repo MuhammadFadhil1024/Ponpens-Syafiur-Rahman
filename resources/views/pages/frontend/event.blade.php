@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-left section-heading probootstrap-animate">
-          <h1>PPM Syafi'ur Rohman Events</h1>
+          <h1>Event PPM Syafi'ur Rohman</h1>
         </div>
       </div>
     </div>

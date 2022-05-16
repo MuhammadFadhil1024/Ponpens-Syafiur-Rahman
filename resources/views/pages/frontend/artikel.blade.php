@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-          <h2>Our Featured Courses</h2>
+          <h2>Artikel PPM Syafi'ur Rohman</h2>
           <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
         </div>
       </div>
