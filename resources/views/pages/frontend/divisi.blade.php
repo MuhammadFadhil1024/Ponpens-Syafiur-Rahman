@@ -12,7 +12,7 @@
           </div>
       <div class="row">
         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-          <a href="#" class="probootstrap-featured-news-box">
+          <a href="{{ url('detaildivisi') }}" class="probootstrap-featured-news-box">
             <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
             <div class="probootstrap-text">
               <h3>Tempora consectetur unde nisi</h3>
@@ -22,7 +22,7 @@
           </a>
         </div>
         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-          <a href="#" class="probootstrap-featured-news-box">
+          <a href="{{ url('detaildivisi') }}" class="probootstrap-featured-news-box">
             <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
             <div class="probootstrap-text">
               <h3>Tempora consectetur unde nisi</h3>
@@ -33,7 +33,7 @@
         </div>
         <div class="clearfix visible-sm-block visible-xs-block"></div>
         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-          <a href="#" class="probootstrap-featured-news-box">
+          <a href="{{ url('detaildivisi') }}" class="probootstrap-featured-news-box">
             <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
             <div class="probootstrap-text">
               <h3>Tempora consectetur unde nisi</h3>
@@ -46,7 +46,7 @@
         <div class="clearfix visible-md-block"></div>
 
         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-          <a href="#" class="probootstrap-featured-news-box">
+          <a href="{{ url('detaildivisi') }}" class="probootstrap-featured-news-box">
             <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
             <div class="probootstrap-text">
               <h3>Tempora consectetur unde nisi</h3>
@@ -58,7 +58,7 @@
         <div class="clearfix visible-sm-block visible-xs-block"></div>
 
         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-          <a href="#" class="probootstrap-featured-news-box">
+          <a href="{{ url('detaildivisi') }}" class="probootstrap-featured-news-box">
             <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
             <div class="probootstrap-text">
               <h3>Tempora consectetur unde nisi</h3>
@@ -68,7 +68,7 @@
           </a>
         </div>
         <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-          <a href="#" class="probootstrap-featured-news-box">
+          <a href="{{ url('detaildivisi') }}" class="probootstrap-featured-news-box">
             <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
             <div class="probootstrap-text">
               <h3>Tempora consectetur unde nisi</h3>
