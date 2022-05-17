@@ -156,6 +156,7 @@
           <div class="tab-content">
 
             <div id="featured-news" class="tab-pane fade in active">
+              <!-- DIVISI PPM SR -->
               <div class="row">
                 <div class="col-md-12">
                   <div class="owl-carousel" id="owl1">
@@ -163,7 +164,7 @@
                       <a href="#" class="probootstrap-featured-news-box">
                         <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                         <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
+                          <h3>Divisi Tempora consectetur unde nisi</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
                           <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
 
@@ -175,7 +176,7 @@
                       <a href="#" class="probootstrap-featured-news-box">
                         <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                         <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
+                          <h3>Divisi Tempora consectetur unde nisi</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
                           <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
 
@@ -187,7 +188,7 @@
                       <a href="#" class="probootstrap-featured-news-box">
                         <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                         <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
+                          <h3>Divisi Tempora consectetur unde nisi</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolores.</p>
                           <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
 
@@ -199,11 +200,9 @@
                       <a href="#" class="probootstrap-featured-news-box">
                         <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                         <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
+                          <h3>Divisi Tempora consectetur unde nisi</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, earum.</p>
                           <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-
-
                         </div>
                       </a>
                     </div>
@@ -211,13 +210,18 @@
                   </div>
                 </div>
               </div>
-              <!-- END row -->
+              <!-- END DIVISI PPM SR -->
+
+              <!-- BUTTON ARTIKEL PPM SR -->
               <div class="row">
                 <div class="col-md-12 text-center">
                   <p><a href="#" class="btn btn-primary">View all news</a></p>
                 </div>
               </div>
+              <!-- END BUTTON ARTIKEL PPM SR -->
+
             </div>
+            <!-- ARTIKEL PPM SR -->
             <div id="upcoming-events" class="tab-pane fade">
               <div class="row">
                 <div class="col-md-12">
@@ -275,6 +279,7 @@
                 </div>
               </div>
             </div>
+            <!-- END ARTIKEL PPM SR -->
 
           </div>
 
@@ -287,7 +292,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-          <h2>Our Featured Courses</h2>
+          <h2>Artikel PPM Syafi'ur Rohman</h2>
           <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
         </div>
       </div>

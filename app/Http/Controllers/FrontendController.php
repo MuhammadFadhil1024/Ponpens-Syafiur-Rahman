@@ -40,4 +40,9 @@ class FrontendController extends Controller
     {
         return view('pages.frontend.detailevent');
     }
+
+    public function detaildivisi(Request $request)
+    {
+        return view('pages.frontend.detaildivisi');
+    }
 }
