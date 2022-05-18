@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
@@ -50,6 +51,7 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
         Route::resource('facility.facilitygallery', FacilityGalleryController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
+        Route::resource('banner', BannerController::class);
     });
 
     Route::middleware(['santri'])->group(function () {
