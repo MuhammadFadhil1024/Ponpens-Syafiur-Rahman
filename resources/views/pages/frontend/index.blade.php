@@ -498,7 +498,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-          <h2>Why Choose Enlight School</h2>
+          <h2>Mengapa Harus Memilih Pondok Pesantren Mahasiswa Syafi'ur Rohman?</h2>
           <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
         </div>
       </div>

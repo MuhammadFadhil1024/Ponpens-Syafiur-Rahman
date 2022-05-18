@@ -1,0 +1,57 @@
+Analisis Database :
+
+1. Home
+Slider Foto:
+- Foto
+
+2. Profil
+Pengasuh Pondok :
+- Foto Pengasuh
+- Jabatan
+- Akun Sosmed
+Facebook
+Ig
+Email
+Whatsapp
+
+BK Pondok :
+- Foto BK
+- Jabatan
+- Akun Sosmed
+Facebook
+Ig
+Email
+Whatsapp
+
+Dewan Guru Pondok
+- Foto Dewan Guru
+- Jabatan
+- Akun Sosmed
+Facebook
+Ig
+Email
+Whatsapp
+
+3. Event
+Foto event
+Nama Kegiatan
+Tanggal Pelaksanaan
+Tempat
+Dokumentasi
+Deskripsi Kegiatan
+
+4. Divisi
+Foto Divisi
+Nama Divisi
+Koor Divisi
+Anggota
+Tugas
+
+5. Artikel
+Foto Artikel
+Judul Artikel
+Penulis
+Tanggal Penulisan
+Deskripsi
+
+

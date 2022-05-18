@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->bigInteger('users_id');
+            $table->date('published');
             $table->longText('content');
             $table->string('link');
             $table->string('slug');
