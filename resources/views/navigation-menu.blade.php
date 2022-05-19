@@ -16,6 +16,9 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                     @if (Auth::user()->roles == 'ADMIN')
+                    <x-jet-nav-link href="{{ route('dashboard.banner.index') }}" :active="request()->routeIs('dashboard.banner.index')">
+                        {{ __('Banner') }}
+                    </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.event.index') }}" :active="request()->routeIs('dashboard.event.index')">
                         {{ __('Event') }}
                     </x-jet-nav-link>

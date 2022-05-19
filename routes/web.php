@@ -12,6 +12,7 @@ use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\DivisionGalleryController;
 use App\Http\Controllers\FacilityGalleryController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ManagementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,7 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
             'index', 'create', 'store', 'destroy'
         ]);
         Route::resource('banner', BannerController::class);
+        Route::resource('management', ManagementController::class);
     });
 
     Route::middleware(['santri'])->group(function () {
