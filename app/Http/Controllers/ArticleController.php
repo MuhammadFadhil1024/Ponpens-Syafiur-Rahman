@@ -125,6 +125,12 @@ class ArticleController extends Controller
     {
         // $user =  Auth::user()->id;
         // dd($user);
+
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+
         $file = $request->file('file');
 
         if ($request->hasFile('file') == "") {

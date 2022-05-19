@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('position');
             $table->string('job');
-            $table->integer('nomor');
+            $table->string('nomor');
             $table->string('url');
             $table->timestamps();
         });

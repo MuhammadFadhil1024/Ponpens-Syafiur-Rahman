@@ -10,6 +10,6 @@ class Management extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'position', 'url', 'job'
+        'name', 'position', 'url', 'job', 'nomor'
     ];
 }

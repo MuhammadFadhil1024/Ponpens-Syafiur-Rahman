@@ -72,6 +72,7 @@ class ManagementController extends Controller
                 'name' => $request->name,
                 'position' => $request->position,
                 'job' => $request->job,
+                'nomor' => $request->nomor,
                 'url' => $path,
             ]);
         }
@@ -95,9 +96,11 @@ class ManagementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Management $management)
     {
-        //
+        return view('pages.dashboard.management.edit', [
+            'item' => $management
+        ]);
     }
 
     /**
@@ -107,9 +110,42 @@ class ManagementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Management $management)
     {
-        //
+        // dd($management);
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'position' => 'required|string|in:PENGASUH,BINA-KONSELING,GURU',
+            'job' => 'required|string|max:255|in:KETUA-UMUM,DEWAN-GURU,BIMBINGAN-KONSELING,PINISEPUH',
+            'nomor' => 'required|string|max:15',
+        ]);
+
+        $file = $request->file('file');
+
+        if ($request->hasFile('file') == "") {
+            $old = $management->url;
+
+
+            $management->name = $request->name;
+            $management->position = $request->position;
+            $management->nomor = $request->nomor;
+            $management->job = $request->job;
+            $management->url = $old;
+
+            $management->save();
+        } else {
+            // Storage::disk('local')->delete('public/articlegallery/ .$management->link');
+
+            $path = $file->store('public/articlegallery');
+
+            $management->name = $request->name;
+            $management->position = $request->position;
+            $management->job = $request->job;
+            $management->url = $path;
+
+            $management->save();
+        }
+        return redirect()->route('dashboard.management.index');
     }
 
     /**
@@ -118,8 +154,10 @@ class ManagementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Management $management)
     {
-        //
+        $management->delete();
+
+        return redirect()->route('dashboard.management.index');
     }
 }
