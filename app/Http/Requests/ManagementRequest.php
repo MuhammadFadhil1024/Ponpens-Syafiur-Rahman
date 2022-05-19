@@ -27,7 +27,7 @@ class ManagementRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'position' => 'required|string|in:PENGASUH,BINA-KONSELING,GURU',
-            'job' => 'required|string|max:255|in:KETUA-UMUM,DEWAN-GURU,BIMBINGAN-KONSELING,PINISEPUH',
+            'job' => 'required|string|max:255|in:KETUA UMUM,DEWAN GURU,BIMBINGAN KONSELING,PINISEPUH',
             'nomor' => 'required|string|max:15',
             'file' => 'required|image'
         ];

@@ -57,9 +57,10 @@
                             <select name="job" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                                 <option value="{{$item->job}}">{{$item->job}}</option>
                                 <option value="">--------------</option>
-                                <option value="PENGASUH">PENGASUH</option>
-                                <option value="BINA-KONSELING">BINA KONSELING</option>
-                                <option value="GURU">GURU</option>
+                                <option value="KETUA UMUM">Ketua Umum</option>
+                                <option value="DEWAN GURU">Dewan Guru</option>
+                                <option value="BIMBINGAN KONSELING">Bimbingan Konseling</option>
+                                <option value="PINISEPUH">Pinisepuh</option>
                             </select>
                         </div>
                     </div>

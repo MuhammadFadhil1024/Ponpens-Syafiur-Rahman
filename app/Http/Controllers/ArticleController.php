@@ -18,10 +18,10 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
         if (request()->ajax()) {
-            $query = Article::query();
+            $query = Article::where('users_id', Auth::user()->id);
             // $removetag = strip_tags($query->description);
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {

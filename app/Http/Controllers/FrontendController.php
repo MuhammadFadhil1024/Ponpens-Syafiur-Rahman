@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Management;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -10,7 +11,9 @@ class FrontendController extends Controller
     public function index(Request $request)
     {
         $banners = Banner::all();
-        return view('pages.frontend.index', compact('banners'));
+        $managements = Management::where('position', 'PENGASUH')->limit(4)->get();
+        // dd($managements);
+        return view('pages.frontend.index', compact('banners', 'managements'));
     }
 
     public function profil(Request $request)
