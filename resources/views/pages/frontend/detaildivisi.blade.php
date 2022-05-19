@@ -51,7 +51,9 @@
                 <h3>Informasi Divisi</h3>
                 <ul>
                   <li><strong>Nama Divisi</strong>: Divisi Penerobos</li>
-                  <li><strong>Koor Divisi</strong>: Henry Maguire</li>
+                  <li><strong>Koor Divisi</strong>: </li>
+                  <li>1. Henry Maguire</li>
+                  <li>2. Salsabilla</li>
                   <li><strong>Anggota</strong>:</li>
                   <li>1. Harry Mujaer</li>
                   <li>2. Ronaldinho</li>

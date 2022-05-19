@@ -240,10 +240,7 @@
               <h3>Chris Worth</h3>
               <p>Physical Education</p>
               <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li class="whatsapp"><a href="#"><i class="icon-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>
@@ -257,10 +254,7 @@
               <h3>Janet Morris</h3>
               <p>English Teacher</p>
               <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li class="whatsapp"><a href="#"><i class="icon-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>
@@ -275,10 +269,7 @@
               <h3>Linda Reyez</h3>
               <p>Math Teacher</p>
               <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li class="whatsapp"><a href="#"><i class="icon-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>
@@ -292,10 +283,7 @@
               <h3>Jessa Sy</h3>
               <p>Physics Teacher</p>
               <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li class="whatsapp"><a href="wa.me/6285748102065"><i class="icon-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>
