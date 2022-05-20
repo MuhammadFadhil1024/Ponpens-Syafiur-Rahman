@@ -10,6 +10,7 @@ use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\DivisionGalleryController;
+use App\Http\Controllers\DivisionTeamController;
 use App\Http\Controllers\FacilityGalleryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ManagementController;
@@ -32,7 +33,7 @@ Route::get('/divisi', [FrontendController::class, 'divisi'])->name('divisi');
 Route::get('/artikel', [FrontendController::class, 'artikel'])->name('artikel');
 Route::get('/detailartikel/{slug}', [FrontendController::class, 'detailartikel'])->name('detailartikel');
 Route::get('/detailevent', [FrontendController::class, 'detailevent'])->name('detailevent');
-Route::get('/detaildivisi', [FrontendController::class, 'detaildivisi'])->name('detaildivisi');
+Route::get('/detaildivisi/{slug}', [FrontendController::class, 'detaildivisi'])->name('detaildivisi');
 Route::get('/detailarticle', [FrontendController::class, 'detailarticle'])->name('detailarticle');
 
 
@@ -46,6 +47,9 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
         ]);
         Route::resource('division', DivisionController::class);
         Route::resource('division.divisiongallery', DivisionGalleryController::class)->shallow()->only([
+            'index', 'create', 'store', 'destroy'
+        ]);
+        Route::resource('division.divisionteam', DivisionTeamController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
         Route::resource('user', UserController::class);

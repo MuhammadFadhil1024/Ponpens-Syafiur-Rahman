@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Division &raquo; {{$division->name}} &raquo; Gallery
+            {{ __('Division Team') }}
         </h2>
     </x-slot>
 
@@ -13,8 +13,9 @@
                     // url yang sedang dibuka sekarang
                 },
                 columns: [
-                    {data : 'id', name: 'id', width: '5%'},
-                    {data : 'url', name: 'url'},
+                    {data : 'id', name: 'id', width: '10%'},
+                    {data : 'name', name: 'name'},
+                    {data : 'position', name: 'position'},
                     {
                         data : 'action',
                         name : 'action',
@@ -22,8 +23,7 @@
                         searchable : false,
                         width : '25%'
                     }
-                ]
-
+                ],
             })
         </script>
     </x-slot>
@@ -31,8 +31,8 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="mb-10">
-                <a href="{{route('dashboard.division.divisiongallery.create', $division->id)}}"  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
-                    + Upload photos
+                <a href="{{route('dashboard.division.divisionteam.create', $division->id)}}"  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
+                    + create division
                 </a>
             </div>
             <div class="shadow overflow-hidden sm-rounded-md">
@@ -41,7 +41,8 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Photo</th>
+                                <th>Nama</th>
+                                <th>Position</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -52,4 +53,5 @@
             </div>
         </div>
     </div>
+
 </x-app-layout>

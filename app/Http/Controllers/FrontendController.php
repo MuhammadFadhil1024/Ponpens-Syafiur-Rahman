@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Banner;
+use App\Models\Division;
 use App\Models\Management;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,10 @@ class FrontendController extends Controller
 
     public function divisi(Request $request)
     {
-        return view('pages.frontend.divisi');
+        $divisions = Division::with(['divisiongallery'])->get();
+        // dd($divisions);
+
+        return view('pages.frontend.divisi', compact('divisions'));
     }
 
     public function artikel(Request $request)
@@ -58,9 +62,11 @@ class FrontendController extends Controller
         return view('pages.frontend.detailevent');
     }
 
-    public function detaildivisi(Request $request)
+    public function detaildivisi(Request $request, $slug)
     {
-        return view('pages.frontend.detaildivisi');
+        $division = Division::where('slug', $slug)->firstOrFail();
+
+        return view('pages.frontend.detaildivisi', compact('division'));
     }
 
     public function detailarticle(Request $request)

@@ -28,6 +28,9 @@ class DivisionController extends Controller
                                 <a href="' . route('dashboard.division.edit', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
                                     Edit
                                 </a>
+                                <a href="' . route('dashboard.division.divisionteam.index', $item->id) . '" class="bg-blue-500 text-white rounded-md px-2 py-1 m-2">
+                                    Teams
+                                </a>
                                 <a href="' . route('dashboard.division.divisiongallery.index', $item->id) . '" class="bg-green-500 text-white rounded-md px-2 py-1 m-2">
                                     Gallery
                                 </a>
