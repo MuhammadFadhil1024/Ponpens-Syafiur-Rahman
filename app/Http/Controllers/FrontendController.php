@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Banner;
 use App\Models\Management;
 use Illuminate\Http\Request;
@@ -18,8 +19,13 @@ class FrontendController extends Controller
 
     public function profil(Request $request)
     {
-        $managements = Management::where('position', 'PENGASUH')->get();
-        return view('pages.frontend.profil', compact('managements'));
+        $pengasuh = Management::where('position', 'PENGASUH')->get();
+
+        $binkons = Management::where('position', 'BINA KONSELING')->get();
+
+        $guru = Management::where('position', 'GURU')->get();
+
+        return view('pages.frontend.profil', compact('pengasuh', 'binkons', 'guru'));
     }
 
     public function event(Request $request)
@@ -34,12 +40,17 @@ class FrontendController extends Controller
 
     public function artikel(Request $request)
     {
-        return view('pages.frontend.artikel');
+        $articles = Article::all();
+
+        return view('pages.frontend.artikel', compact('articles'));
     }
 
-    public function detailartikel(Request $request)
+    public function detailartikel(Request $request, $slug)
     {
-        return view('pages.frontend.detailartikel');
+        $article = Article::where('slug', $slug)->firstOrFail();
+        // dd($article);
+
+        return view('pages.frontend.detailartikel', compact('article'));
     }
 
     public function detailevent(Request $request)

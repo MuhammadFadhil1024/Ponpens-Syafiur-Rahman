@@ -12,66 +12,23 @@
       </div>
       <!-- END row -->
       <div class="row">
-        <div class="col-md-6">
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
+        @foreach ($articles as $article)
+          <div class="col-md-6">
+            <div class="probootstrap-service-2 probootstrap-animate">
+              <div class="image">
+                <div class="image-bg">
+                  <img src="{{ Storage::url($article->link) }}">
+                </div>
+              </div>
+              <div class="text">
+                <span class="probootstrap-meta"><i class="icon-calendar2"></i> {{$article->published}}</span>
+                <h3>{{$article->title}}</h3>
+                <p>{!! Str::limit($article->content, 200) !!}</p>
+                <p><a href="{{ route('detailartikel', $article->slug) }}" class="btn btn-primary">Baca</a>
               </div>
             </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>Application Design</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p>
-            </div>
           </div>
-
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-              </div>
-            </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>Chemical Engineering</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-md-6">
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-              </div>
-            </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>Math Major</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p>
-            </div>
-          </div>
-
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_4.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-              </div>
-            </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>English Major</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="{{ url('detailartikel') }}" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p>
-            </div>
-          </div>
-
-        </div>
+        @endforeach
       </div>
     </div>
   </section>

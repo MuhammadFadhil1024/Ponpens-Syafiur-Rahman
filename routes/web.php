@@ -30,7 +30,7 @@ Route::get('/profil', [FrontendController::class, 'profil'])->name('profil');
 Route::get('/event', [FrontendController::class, 'event'])->name('event');
 Route::get('/divisi', [FrontendController::class, 'divisi'])->name('divisi');
 Route::get('/artikel', [FrontendController::class, 'artikel'])->name('artikel');
-Route::get('/detailartikel', [FrontendController::class, 'detailartikel'])->name('detailartikel');
+Route::get('/detailartikel/{slug}', [FrontendController::class, 'detailartikel'])->name('detailartikel');
 Route::get('/detailevent', [FrontendController::class, 'detailevent'])->name('detailevent');
 Route::get('/detaildivisi', [FrontendController::class, 'detaildivisi'])->name('detaildivisi');
 Route::get('/detailarticle', [FrontendController::class, 'detailarticle'])->name('detailarticle');

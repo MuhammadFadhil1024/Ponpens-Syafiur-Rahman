@@ -7,6 +7,7 @@ use App\Models\Article;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
@@ -82,6 +83,7 @@ class ArticleController extends Controller
             Article::create([
                 'title' => $request->title,
                 'users_id' => $user,
+                'published' => Carbon::now()->format('d M Y'),
                 'content' => $request->content,
                 'link' => $path,
                 'slug' => $slug
