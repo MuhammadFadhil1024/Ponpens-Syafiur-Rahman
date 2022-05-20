@@ -3,18 +3,18 @@
 @section('content')
 
   <!-- Favicons -->
-  <link href="{{ url('frontend/folio/assets/img/favicon.png')}}" rel="icon">
-  <link href="{{ url('frontend/folio/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  {{-- <link href="{{ url('frontend/folio/assets/img/favicon.png')}}" rel="icon"> --}}
+  {{-- <link href="{{ url('frontend/folio/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> --}}
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+  {{-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet"> --}}
 
   <!-- Vendor CSS Files -->
-  <!-- <link href="{{ url('frontend/folio/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> -->
-  <link href="{{ url('frontend/folio/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ url('frontend/folio/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ url('frontend/folio/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ url('frontend/folio/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  {{-- <!-- <link href="{{ url('frontend/folio/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --> --}}
+  {{-- <link href="{{ url('frontend/folio/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet"> --}}
+  {{-- <link href="{{ url('frontend/folio/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet"> --}}
+  {{-- <link href="{{ url('frontend/folio/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet"> --}}
+  {{-- <link href="{{ url('frontend/folio/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
 
   <!-- Template Main CSS File -->
   <link href="{{ url('frontend/folio/assets/css/style.css') }}" rel="stylesheet">
@@ -31,7 +31,7 @@
                       <img src="{{ url('frontend/folio/assets/img/blog-post-big.jpg') }}" class="img-responsive" alt="reviews2">
                       <div class="content-main single-post padDiv">
                         <div class="journal-txt">
-                          <h4><a href="#">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
+                          <h4>Hari Santri</h4>
                         </div>
                         <div class="post-meta">
                           <ul class="list-unstyled mb-0">

@@ -18,7 +18,8 @@ class FrontendController extends Controller
 
     public function profil(Request $request)
     {
-        return view('pages.frontend.profil');
+        $managements = Management::where('position', 'PENGASUH')->get();
+        return view('pages.frontend.profil', compact('managements'));
     }
 
     public function event(Request $request)
@@ -49,5 +50,10 @@ class FrontendController extends Controller
     public function detaildivisi(Request $request)
     {
         return view('pages.frontend.detaildivisi');
+    }
+
+    public function detailarticle(Request $request)
+    {
+        return view('pages.frontend.detailarticle');
     }
 }
