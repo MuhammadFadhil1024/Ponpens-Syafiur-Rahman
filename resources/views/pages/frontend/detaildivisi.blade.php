@@ -29,17 +29,11 @@
               <div class="portfolio-details-slider swiper">
                 <div class="swiper-wrapper align-items-center">
 
-                  <div class="swiper-slide">
-                    <img src="{{ url('frontend/folio/assets/img/portfolio/portfolio-details-1.jpg') }}" alt="">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="{{ url('frontend/folio/assets/img/portfolio/portfolio-details-2.jpg') }}" alt="">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="{{ url('frontend/folio/assets/img/portfolio/portfolio-details-3.jpg') }}" alt="">
-                  </div>
+                  @foreach ($division->divisiongallery as $item)
+                    <div class="swiper-slide">
+                      <img src="{{ Storage::url($item->url) }}" alt="">
+                    </div>
+                  @endforeach
 
                 </div>
                 <div class="swiper-pagination"></div>
@@ -50,15 +44,19 @@
               <div class="portfolio-info">
                 <h3>Informasi Divisi</h3>
                 <ul>
-                  <li><strong>Nama Divisi</strong>: Divisi Penerobos</li>
+                  <li><strong>Nama Divisi</strong>: {{$division->name}}</li>
                   <li><strong>Koor Divisi</strong>: </li>
-                  <li>1. Henry Maguire</li>
-                  <li>2. Salsabilla</li>
+                  @foreach ($division->divisionteam as $item)
+                    @if ($item->position == 'KORDINATOR')
+                    <li>{{$item->name}}</li>
+                    @endif
+                  @endforeach
                   <li><strong>Anggota</strong>:</li>
-                  <li>1. Harry Mujaer</li>
-                  <li>2. Ronaldinho</li>
-                  <li>3. Lord Dedik</li>
-                  <li>4. Kambuaya</li>
+                  @foreach ($division->divisionteam as $item)
+                      @if ($item->position == 'ANGGOTA')
+                      <li>{{$item->name}}</li>
+                      @endif
+                  @endforeach
                 </ul>
               </div>
               <p></p>

@@ -64,7 +64,12 @@ class FrontendController extends Controller
 
     public function detaildivisi(Request $request, $slug)
     {
-        $division = Division::where('slug', $slug)->firstOrFail();
+        $division = Division::with(['divisiongallery', 'divisionteam'])->where('slug', $slug)->firstOrFail();
+
+        // $kordinator = Division::with(['divisioteam'])->where('position', 'KORDINATOR')->get();
+
+        // dd($division);
+
 
         return view('pages.frontend.detaildivisi', compact('division'));
     }

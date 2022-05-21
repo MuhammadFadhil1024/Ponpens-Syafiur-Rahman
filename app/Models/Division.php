@@ -19,4 +19,9 @@ class Division extends Model
     {
         return $this->hasMany(DivisionGallery::class, 'divisions_id', 'id');
     }
+
+    public function divisionteam()
+    {
+        return $this->hasMany(DivisionTeam::class, 'divisions_id', 'id');
+    }
 }
