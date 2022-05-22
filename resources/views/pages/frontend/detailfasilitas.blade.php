@@ -29,7 +29,7 @@
               <div class="portfolio-details-slider swiper">
                 <div class="swiper-wrapper align-items-center">
 
-                  @foreach ($division->divisiongallery as $item)
+                  @foreach ($fasilitas->fasilitasgallery as $item)
                     <div class="swiper-slide">
                       <img src="{{ Storage::url($item->url) }}" alt="">
                     </div>
@@ -42,32 +42,16 @@
 
             <div class="col-lg-4">
               <div class="portfolio-info">
-                <h3>Informasi Divisi</h3>
+                <h3>Informasi Fasilitas</h3>
                 <ul>
-                  <li><strong>Nama Divisi</strong>: {{$division->name}}</li>
-                  <li><strong>Koor Divisi</strong>: </li>
-                  @foreach ($division->divisionteam as $item)
-                    @if ($item->position == 'KORDINATOR')
-                    <li>-
-                      {{$item->name}}
-                    </li>
-                    @endif
-                  @endforeach
-                  <li><strong>Anggota</strong>:</li>
-                  @foreach ($division->divisionteam as $item)
-                      @if ($item->position == 'ANGGOTA')
-                      <li>-
-                        {{$item->name}}
-                      </li>
-                      @endif
-                  @endforeach
+                  <li>{!! $fasilitas->description !!}</li>
                 </ul>
               </div>
               <p></p>
               <div class="portfolio-info">
-                <h3>Tugas Divisi Penerobos</h3>
+                <h3>adasdasd</h3>
                 <ul>
-                  <li>{!! $division->description !!}</li>
+                  <li>asdasdas</li>
                 </ul>
               </div>
               <p></p>

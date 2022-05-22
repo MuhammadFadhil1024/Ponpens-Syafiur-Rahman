@@ -65,7 +65,7 @@ class DivisionTeamController extends Controller
             'position' => $request->position
         ]);
 
-        return redirect()->route('dashboard.division.divisiongallery.index', $division->id);
+        return redirect()->route('dashboard.division.divisionteam.index', $division->id);
     }
 
     /**

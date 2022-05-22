@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Banner;
 use App\Models\Division;
+use App\Models\Facility;
 use App\Models\Management;
 use Illuminate\Http\Request;
 
@@ -77,5 +78,19 @@ class FrontendController extends Controller
     public function detailarticle(Request $request)
     {
         return view('pages.frontend.detailarticle');
+    }
+
+    public function fasilitas(Request $request)
+    {
+        $fasilitas = Facility::with(['fasilitasgallery'])->get();
+
+        return view('pages.frontend.fasilitas', compact('fasilitas'));
+    }
+
+    public function detailfasilitas(Request $request, $slug)
+    {
+        $fasilitas = Facility::with(['fasilitasgallery'])->where('slug', $slug)->firstOrFail();
+
+        return view('pages.frontend.detailfasilitas', compact('fasilitas'));
     }
 }

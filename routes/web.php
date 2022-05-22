@@ -34,7 +34,8 @@ Route::get('/artikel', [FrontendController::class, 'artikel'])->name('artikel');
 Route::get('/detailartikel/{slug}', [FrontendController::class, 'detailartikel'])->name('detailartikel');
 Route::get('/detailevent', [FrontendController::class, 'detailevent'])->name('detailevent');
 Route::get('/detaildivisi/{slug}', [FrontendController::class, 'detaildivisi'])->name('detaildivisi');
-Route::get('/detailarticle', [FrontendController::class, 'detailarticle'])->name('detailarticle');
+Route::get('/fasilitas', [FrontendController::class, 'fasilitas'])->name('fasilitas');
+Route::get('/detailfasilitas/{slug}', [FrontendController::class, 'detailfasilitas'])->name('detailfasilitas');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('dashboard')->group(function () {

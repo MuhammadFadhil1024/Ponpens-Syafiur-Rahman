@@ -12,4 +12,9 @@ class Facility extends Model
     protected $fillable = [
         'name', 'description', 'slug'
     ];
+
+    public function fasilitasgallery()
+    {
+        return $this->hasMany(FacilityGallery::class, 'facilitys_id', 'id');
+    }
 }

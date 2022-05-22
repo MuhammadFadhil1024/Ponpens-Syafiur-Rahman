@@ -40,6 +40,7 @@
           <li><a href="{{ url('event') }}">Event</a></li>
           <li><a href="{{ url('divisi') }}">Divisi</a></li>
           <li><a href="{{ url('artikel') }}">Artikel</a></li>
+          <li><a href="{{ url('fasilitas') }}">Fasilitas</a></li>
           <li><a href="contact.html">Daftar</a></li>
         </ul>
       </div>
