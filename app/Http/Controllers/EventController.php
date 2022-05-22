@@ -6,6 +6,7 @@ use App\Models\Event;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\EventRequest;
+use Carbon\Carbon;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -64,12 +65,23 @@ class EventController extends Controller
      */
     public function store(EventRequest $request, Event $event)
     {
-        $data = request()->all();
-        $data['slug'] = Str::slug($request->name);
+        $date = $request->date;
 
-        Event::create($data);
+        $year = Carbon::createFromFormat('d/m/Y', $date)->format('Y');
+        // dd($year);
 
-        return redirect()->route('pages.dashboard.event.index');
+        $slug = Str::slug($request->name);
+
+        Event::create([
+            'name' => $request->name,
+            'year' => $year,
+            'date' => $date,
+            'location' => $request->location,
+            'description' => $request->description,
+            'slug' => $slug
+        ]);
+
+        return redirect()->route('dashboard.event.index');
     }
 
     /**

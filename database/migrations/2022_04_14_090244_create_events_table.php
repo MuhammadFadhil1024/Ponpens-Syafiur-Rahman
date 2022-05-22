@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('year');
+            $table->string('date');
             $table->string('location');
             $table->longText('description');
-            $table->string('link');
             $table->string('slug')->unique();
             $table->timestamps();
         });

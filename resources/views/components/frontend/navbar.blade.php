@@ -33,6 +33,8 @@
         <a class="navbar-brand" href="{{ url('/') }}" title="ProBootstrap:Enlight">PPM Syafi'ur Rohman</a>
       </div>
 
+      
+
       <div id="navbar-collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="{{ url('/') }}">Home</a></li>
@@ -41,6 +43,16 @@
           <li><a href="{{ url('divisi') }}">Divisi</a></li>
           <li><a href="{{ url('artikel') }}">Artikel</a></li>
           <li><a href="{{ url('fasilitas') }}">Fasilitas</a></li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Event</a>
+            <ul class="dropdown-menu">
+              @php($link = App\Models\Event::all())
+              @php($uniqyear = $link->unique('year'))
+                @foreach ($uniqyear as $item)
+                  <li><a href="{{route('event', $item->year)}}">{{$item->year}}</a></li>  
+                @endforeach
+            </ul>
+          </li>
           <li><a href="contact.html">Daftar</a></li>
         </ul>
       </div>

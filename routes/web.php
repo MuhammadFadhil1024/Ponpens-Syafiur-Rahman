@@ -28,11 +28,11 @@ use App\Http\Controllers\ManagementController;
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/profil', [FrontendController::class, 'profil'])->name('profil');
-Route::get('/event', [FrontendController::class, 'event'])->name('event');
+Route::get('/event/{year}', [FrontendController::class, 'event'])->name('event');
 Route::get('/divisi', [FrontendController::class, 'divisi'])->name('divisi');
 Route::get('/artikel', [FrontendController::class, 'artikel'])->name('artikel');
 Route::get('/detailartikel/{slug}', [FrontendController::class, 'detailartikel'])->name('detailartikel');
-Route::get('/detailevent', [FrontendController::class, 'detailevent'])->name('detailevent');
+Route::get('/detailevent/{slug}', [FrontendController::class, 'detailevent'])->name('detailevent');
 Route::get('/detaildivisi/{slug}', [FrontendController::class, 'detaildivisi'])->name('detaildivisi');
 Route::get('/fasilitas', [FrontendController::class, 'fasilitas'])->name('fasilitas');
 Route::get('/detailfasilitas/{slug}', [FrontendController::class, 'detailfasilitas'])->name('detailfasilitas');

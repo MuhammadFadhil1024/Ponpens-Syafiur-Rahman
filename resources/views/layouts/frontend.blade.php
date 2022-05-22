@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="{{ url('frontend/enlight-master/css/style.min.css') }}">
     <link rel="stylesheet" href="{{ url('frontend/enlight-master/css/custom.css') }}">
 
+    
+    
+    @stack('content-css')
+
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
@@ -50,6 +54,7 @@
     <script src="{{ url('frontend/enlight-master/js/scripts.min.js') }}"></script>
     <script src="{{ url('frontend/enlight-master/js/main.min.js') }}"></script>
     <script src="{{ url('frontend/enlight-master/js/custom.js') }}"></script>
+    @stack('content-js')
 
   </body>
 </html>

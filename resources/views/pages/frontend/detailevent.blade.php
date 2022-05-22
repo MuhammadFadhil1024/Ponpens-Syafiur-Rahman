@@ -29,17 +29,11 @@
               <div class="portfolio-details-slider swiper">
                 <div class="swiper-wrapper align-items-center">
 
-                  <div class="swiper-slide">
-                    <img src="{{ url('frontend/folio/assets/img/portfolio/portfolio-details-1.jpg') }}" alt="">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="{{ url('frontend/folio/assets/img/portfolio/portfolio-details-2.jpg') }}" alt="">
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img src="{{ url('frontend/folio/assets/img/portfolio/portfolio-details-3.jpg') }}" alt="">
-                  </div>
+                  @foreach ($events->eventgallery as $item)
+                    <div class="swiper-slide">
+                      <img src="{{ Storage::url($item->url) }}" alt="">
+                    </div>
+                  @endforeach
 
                 </div>
                 <div class="swiper-pagination"></div>
@@ -50,19 +44,15 @@
               <div class="portfolio-info">
                 <h3>Informasi Kegiatan</h3>
                 <ul>
-                  <li><strong>Nama Kegiatan</strong>: Halal Bihalal</li>
-                  <li><strong>Tanggal Pelaksanaan</strong>: 12 Maret 2022</li>
-                  <li><strong>Tempat</strong>: Aula PPM SR</li>
-                  <li><strong>Dokumentasi</strong>: <a href="#">www.example.com</a></li>
+                  <li><strong>Nama Kegiatan:</strong> {{$events->name}}</li>
+                  <li><strong>Tanggal Pelaksanaan:</strong> {{$events->date}}</li>
+                  <li><strong>Tempat:</strong>{{$events->location}}</li>
                 </ul>
               </div>
               <div class="portfolio-description">
-                <h2>Halal Bihalal Santri dan Pengasuh PPM Syafi'ur Rohman</h2>
+                <h2>{{$events->name}}</h2>
                 <p>
-                  Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi
-                  labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque
-                  itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur
-                  dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                 {!! $events->description !!}
                 </p>
               </div>
             </div>

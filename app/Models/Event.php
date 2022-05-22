@@ -11,7 +11,7 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'date', 'location', 'description','link', 'slug'
+        'name', 'date', 'location', 'description', 'slug', 'year'
     ];
 
     public function eventgallery()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Banner;
 use App\Models\Division;
+use App\Models\Event;
 use App\Models\Facility;
 use App\Models\Management;
 use Illuminate\Http\Request;
@@ -30,9 +31,11 @@ class FrontendController extends Controller
         return view('pages.frontend.profil', compact('pengasuh', 'binkons', 'guru'));
     }
 
-    public function event(Request $request)
+    public function event(Request $request, $year)
     {
-        return view('pages.frontend.event');
+        $events = Event::with(['eventgallery'])->where('year', $year)->get();
+        // dd($events);
+        return view('pages.frontend.event', compact('events'));
     }
 
     public function divisi(Request $request)
@@ -58,9 +61,11 @@ class FrontendController extends Controller
         return view('pages.frontend.detailartikel', compact('article'));
     }
 
-    public function detailevent(Request $request)
+    public function detailevent(Request $request, $slug)
     {
-        return view('pages.frontend.detailevent');
+        $events = Event::where('slug', $slug)->firstOrFail();
+
+        return view('pages.frontend.detailevent', compact('events'));
     }
 
     public function detaildivisi(Request $request, $slug)
@@ -93,4 +98,11 @@ class FrontendController extends Controller
 
         return view('pages.frontend.detailfasilitas', compact('fasilitas'));
     }
+
+    // public function navbar(Request $request, Event $event)
+    // {
+    //     $event = Event::all();
+
+    //     return view('')
+    // }
 }
