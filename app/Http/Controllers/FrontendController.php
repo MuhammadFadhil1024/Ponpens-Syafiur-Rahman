@@ -17,7 +17,13 @@ class FrontendController extends Controller
         $banners = Banner::all();
         $managements = Management::where('position', 'PENGASUH')->limit(4)->get();
         // dd($managements);
-        return view('pages.frontend.index', compact('banners', 'managements'));
+        $articles = Article::InRandomOrder()->limit(4)->get();
+
+        $divisions = Division::with(['divisiongallery'])->InRandomOrder()->get();
+        // dd($divisions);
+        $news = Article::InRandomOrder()->limit(3)->get();
+
+        return view('pages.frontend.index', compact('banners', 'managements', 'articles', 'divisions', 'news'));
     }
 
     public function profil(Request $request)

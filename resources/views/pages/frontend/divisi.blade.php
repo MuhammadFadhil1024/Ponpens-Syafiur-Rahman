@@ -14,7 +14,7 @@
         @foreach ($divisions as $division)
           <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
             <a href="{{route('detaildivisi', $division->slug)}}" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img src="{{$division->divisiongallery()->exists() ? Storage::url($division->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+              <figure class="probootstrap-media"><img height="500px" src="{{$division->divisiongallery()->exists() ? Storage::url($division->divisiongallery->first()->url) : url('frontend/enlight-master/img/img_sm_1.jpg')}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
               <div class="probootstrap-text">
                 <h3>{{$division->name}}</h3>
               </div>

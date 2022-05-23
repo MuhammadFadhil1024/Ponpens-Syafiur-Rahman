@@ -121,8 +121,8 @@
     </div>
     <div class="probootstrap-tab-style-1">
       <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border">
-        <li class="active"><a data-toggle="tab" href="#featured-news">Divisi PPM SR</a></li>
-        <li><a data-toggle="tab" href="#upcoming-events">Artikel PPM SR</a></li>
+        <li class="active"><a data-toggle="tab" href="#featured-news">Artikel PPM SR</a></li>
+        <li><a data-toggle="tab" href="#upcoming-events">Divisi PPM SR</a></li>
       </ul>
     </div>
   </section>
@@ -139,55 +139,23 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="owl-carousel" id="owl1">
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Divisi Tempora consectetur unde nisi</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-
-                        </div>
-                      </a>
+                  @foreach ($divisions as $item)
+                  {{-- @php
+                      dd($item)
+                  @endphp --}}
+                      <div class="item">
+                        <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
+                          <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                          <div class="probootstrap-text">
+                            <h3>{{$item->name}}</h3>
+                            <p>{!! Str::limit($item->description, 200) !!}</p>
+                          </div>
+                        </a>
+                      </div>
+                      @endforeach
                     </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Divisi Tempora consectetur unde nisi</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Divisi Tempora consectetur unde nisi</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolores.</p>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Divisi Tempora consectetur unde nisi</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, earum.</p>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
                   </div>
-                </div>
+                    <!-- END item -->
               </div>
               <!-- END DIVISI PPM SR -->
 
@@ -277,66 +245,23 @@
       </div>
       <!-- END row -->
       <div class="row">
-        <div class="col-md-6">
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
+        @foreach ($articles as $item)
+          <div class="col-md-6">
+            <div class="probootstrap-service-2 probootstrap-animate">
+              <div class="image">
+                <div class="image-bg">
+                  <img src="{{ Storage::url($item->link) }}" alt="Free Bootstrap Template by ProBootstrap.com">
+                </div>
+              </div>
+              <div class="text">
+                <span class="probootstrap-meta"><i class="icon-calendar2"></i> {{$item->published}}</span>
+                <h3>{{$item->title}}</h3>
+                <p>{!! Str::limit($item->content, 200) !!}</p>
+                <p><a href="{{route('detailartikel', $item->slug)}}" class="btn btn-primary">Baca</a></p>
               </div>
             </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>Application Design</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">2,928 students enrolled</span></p>
-            </div>
-          </div>
-
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-              </div>
-            </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>Chemical Engineering</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">7,202 students enrolled</span></p>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-md-6">
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-              </div>
-            </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>Math Major</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">12,582 students enrolled</span></p>
-            </div>
-          </div>
-
-          <div class="probootstrap-service-2 probootstrap-animate">
-            <div class="image">
-              <div class="image-bg">
-                <img src="{{ url('frontend/enlight-master/img/img_sm_4.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-              </div>
-            </div>
-            <div class="text">
-              <span class="probootstrap-meta"><i class="icon-calendar2"></i> July 10, 2017</span>
-              <h3>English Major</h3>
-              <p>Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
-              <p><a href="#" class="btn btn-primary">Enroll now</a> <span class="enrolled-count">9,582 students enrolled</span></p>
-            </div>
-          </div>
-
-        </div>
+          </div>    
+        @endforeach
       </div>
     </div>
   </section>

@@ -115,12 +115,23 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EventRequest $request, Event $event)
+    public function update(Request $request, Event $event)
     {
-        $data = request()->all();
-        $data['slug'] = Str::slug($request->name);
+        // dd($event);
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'location' => 'required|max:255',
+            'description' => 'required'
+        ]);
 
-        $event->update($data);
+        $slug = Str::slug($request->name);
+
+        $event->name = $request->name;
+        $event->location = $request->location;
+        $event->description = $request->description;
+        $event->slug = $slug;
+
+        $event->save();
 
         return redirect()->route('dashboard.event.index');
     }
