@@ -35,7 +35,7 @@
                         </div>
                         <div class="post-meta">
                           <ul class="list-unstyled mb-0">
-                            <li class="author">by:<a href="#">medsign</a></li>
+                            <li class="author">by:<a href="#">{{$article->user->name}}</a></li>
                             <li class="date">date: {{$article->published}}</li>
                           </ul>
                         </div>

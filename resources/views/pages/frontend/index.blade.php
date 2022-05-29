@@ -101,7 +101,7 @@
             </div>
             <div class="probootstrap-text">
               <span class="probootstrap-counter">
-                <span class="js-counter" data-from="0" data-to="100" data-speed="5000" data-refresh-interval="50">1</span>%
+                <span class="js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50">1</span>%
               </span>
               <span class="probootstrap-counter-label">Tingkat Kepuasan</span>
             </div>
@@ -145,7 +145,7 @@
                   @endphp --}}
                       <div class="item">
                         <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
-                          <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                          <figure class="probootstrap-media"><img src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
                           <div class="probootstrap-text">
                             <h3>{{$item->name}}</h3>
                             <p>{!! Str::limit($item->description, 200) !!}</p>
@@ -162,7 +162,7 @@
               <!-- BUTTON ARTIKEL PPM SR -->
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <p><a href="#" class="btn btn-primary">View all news</a></p>
+                  <p><a href="{{route('divisi')}}" class="btn btn-primary">Lihat semua divisi</a></p>
                 </div>
               </div>
               <!-- END BUTTON ARTIKEL PPM SR -->
@@ -173,56 +173,25 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="owl-carousel" id="owl2">
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg')}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
+                    @foreach ($news as $item)
+                      <div class="item">
+                        <a href="{{route('detailartikel', $item->slug)}}" class="probootstrap-featured-news-box">
+                          <figure class="probootstrap-media"><img src="{{ Storage::url($item->link) }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                          <div class="probootstrap-text">
+                            <h3>{{$item->title}}</h3>
+                            <p>{!! Str::limit($item->content, 150) !!}</p>
+                            <span class="probootstrap-date"><i class="icon-calendar"></i>{{$item->published}}</span>
+                          </div>
+                        </a>
+                      </div>
+                    @endforeach
                     <!-- END item -->
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <p><a href="#" class="btn btn-primary">View all events</a></p>
+                  <p><a href="{{route('artikel')}}" class="btn btn-primary">Lihat semua artrikel</a></p>
                 </div>
               </div>
             </div>
@@ -283,7 +252,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="probootstrap-teacher text-center probootstrap-animate">
             <figure class="media">
-              <img src="{{ Storage::url($management->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+              <img src="{{ Storage::url($management->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-custom">
             </figure>
             <div class="text">
               <h6>{{$management->name}}</h6>

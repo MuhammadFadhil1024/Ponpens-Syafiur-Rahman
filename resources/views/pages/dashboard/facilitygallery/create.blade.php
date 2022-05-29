@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Facility &raquo; {{$facility->name}} &raquo; Gallery &raquo; Uppload Photos
+            Fasilitas &raquo; {{$facility->name}} &raquo; Galeri &raquo; Tambah foto
         </h2>
     </x-slot>
 
@@ -28,14 +28,13 @@
                     @csrf
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Name</label>
                             <input type="file" name="files[]" multiple placeholder="Photos" accept="image/*" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
-                                Save Gallery
+                                Simpan Galeri
                            </button>
                         </div>
                     </div>

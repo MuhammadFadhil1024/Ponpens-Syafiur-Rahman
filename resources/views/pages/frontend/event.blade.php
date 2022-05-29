@@ -46,7 +46,7 @@
         @foreach ($events as $item)
           <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
             <a href="{{ url('detailevent', $item->slug) }}" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img src="{{$item->eventgallery()->exists() ? Storage::url($item->eventgallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+              <figure class="probootstrap-media"><img src="{{$item->eventgallery()->exists() ? Storage::url($item->eventgallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
               <div class="probootstrap-text">
                 <h3>{{$item->name}}</h3>
                 <span class="probootstrap-date"><i class="icon-calendar"></i>{{$item->date}}</span>

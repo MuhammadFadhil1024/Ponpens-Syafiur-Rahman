@@ -29,19 +29,19 @@
                     @method('PUT')
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Name</label>
-                            <input type="text" value="{{old('name') ?? $item->name}}" name="name" placeholder="Full Name" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Nama</label>
+                            <input type="text" value="{{old('name') ?? $item->name}}" name="name" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Nomor</label>
-                            <input type="text" value="{{old('nomor') ?? $item->nomor}}" name="nomor" placeholder="Number phone" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <input type="text" value="{{old('nomor') ?? $item->nomor}}" name="nomor" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Position</label>
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Posisi</label>
                             <select name="position" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                                 <option value="{{$item->position}}">{{$item->position}}</option>
                                 <option value="">--------------</option>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Job</label>
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Pekerjaan</label>
                             <select name="job" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                                 <option value="{{$item->job}}">{{$item->job}}</option>
                                 <option value="">--------------</option>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Image</label>
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Foto</label>
                             <input type="file" value="{{old('url') ?? $item->url}}" name="file" multiple placeholder="Thumbnile" accept="image/*" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>

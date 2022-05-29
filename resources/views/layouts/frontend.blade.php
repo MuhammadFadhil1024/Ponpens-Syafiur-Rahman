@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ url('frontend/enlight-master/css/styles-merged.css') }}">
     <link rel="stylesheet" href="{{ url('frontend/enlight-master/css/style.min.css') }}">
     <link rel="stylesheet" href="{{ url('frontend/enlight-master/css/custom.css') }}">
+    <link rel="stylesheet" href="{{url('frontend/custom/style.css')}}">
 
     
     

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Event &raquo; Create
+            Event &raquo; Tambah
         </h2>
     </x-slot>
 
@@ -28,25 +28,25 @@
                     @csrf
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Event name</label>
-                            <input type="text" name="name" placeholder="Event Name" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Nama event</label>
+                            <input type="text" name="name" placeholder="Nama event" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Location</label>
-                            <input type="text" name="location" placeholder="Location" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Lokasi</label>
+                            <input type="text" name="location" placeholder="Lokasi" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Date</label>
-                            <input type="text" name="date" id="datepicker" placeholder="Date event" class=" yearpicker block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Tanggal</label>
+                            <input type="text" name="date" id="datepicker" placeholder="Tanggal event" class=" yearpicker block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Description</label>
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Deskripsi</label>
                             <textarea  name="description" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500"> {!! old('description') !!} </textarea>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
-                                Save Event
+                                Simpan Event
                            </button>
                         </div>
                     </div>

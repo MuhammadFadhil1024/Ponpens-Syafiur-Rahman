@@ -25,7 +25,7 @@ class EventGalleryController extends Controller
                     return '
                         <form class="inline-block" action="' . route('dashboard.eventgallery.destroy', $item->id) . '" method="POST">
                             <button class="inline-block bg-red-600 text-white rounded-md px-2 py-1 m-2">
-                                Delete
+                                Hapus
                             </button>
                             ' . method_field('delete') . csrf_field() . '
                         </form>';

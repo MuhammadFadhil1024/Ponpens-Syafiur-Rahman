@@ -29,11 +29,11 @@ class EventController extends Controller
                                     Edit
                                 </a>
                                 <a href="' . route('dashboard.event.eventgallery.index', $item->id) . '" class="bg-green-500 text-white rounded-md px-2 py-1 m-2">
-                                    Gallery
+                                    Galeri
                                 </a>
                                 <form class="" action="' . route('dashboard.event.destroy', $item->id) . '" method="POST">
                                     <button class=" bg-red-600 text-white rounded-md px-2 py-1 m-2">
-                                        Delete
+                                        Hapus
                                     </button>
                                 ' . method_field('delete') . csrf_field() . '
                                 </form>

@@ -23,16 +23,16 @@
                         {{ __('Event') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.division.index') }}" :active="request()->routeIs('dashboard.division.index')">
-                        {{ __('Division') }}
+                        {{ __('Divisi') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                         {{ __('User') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.facility.index') }}" :active="request()->routeIs('dashboard.facility.index')">
-                        {{ __('Facility') }}
+                        {{ __('Fasilitas') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.management.index') }}" :active="request()->routeIs('dashboard.management.index')">
-                        {{ __('Management') }}
+                        {{ __('Pengurus') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard.registration.index') }}" :active="request()->routeIs('dashboard.management.index')">
                         {{ __('Registration') }}
@@ -41,7 +41,7 @@
 
                     @if (Auth::user()->roles == 'SANTRI')
                     <x-jet-nav-link href="{{ route('dashboard.article.index') }}" :active="request()->routeIs('dashboard.event.index')">
-                        {{ __('Articles') }}
+                        {{ __('Artikel') }}
                     </x-jet-nav-link>
                     @endif
                 </div>

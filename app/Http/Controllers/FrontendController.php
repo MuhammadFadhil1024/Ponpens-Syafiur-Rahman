@@ -18,10 +18,11 @@ class FrontendController extends Controller
         $managements = Management::where('position', 'PENGASUH')->limit(4)->get();
         // dd($managements);
         $articles = Article::InRandomOrder()->limit(4)->get();
-
-        $divisions = Division::with(['divisiongallery'])->InRandomOrder()->get();
+        // dd($articles);
+        $divisions = Division::with(['divisiongallery'])->InRandomOrder()->limit(6)->get();
         // dd($divisions);
-        $news = Article::InRandomOrder()->limit(3)->get();
+        $news = Article::with(['user'])->InRandomOrder()->limit(6)->get();
+        // dd($news);
 
         return view('pages.frontend.index', compact('banners', 'managements', 'articles', 'divisions', 'news'));
     }
@@ -61,7 +62,7 @@ class FrontendController extends Controller
 
     public function detailartikel(Request $request, $slug)
     {
-        $article = Article::where('slug', $slug)->firstOrFail();
+        $article = Article::with(['user'])->where('slug', $slug)->firstOrFail();
         // dd($article);
 
         return view('pages.frontend.detailartikel', compact('article'));
@@ -77,7 +78,6 @@ class FrontendController extends Controller
     public function detaildivisi(Request $request, $slug)
     {
         $division = Division::with(['divisiongallery', 'divisionteam'])->where('slug', $slug)->firstOrFail();
-
         // $kordinator = Division::with(['divisioteam'])->where('position', 'KORDINATOR')->get();
 
         // dd($division);

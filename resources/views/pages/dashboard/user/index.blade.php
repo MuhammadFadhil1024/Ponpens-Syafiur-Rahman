@@ -40,7 +40,7 @@
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>Email</th>
-                                <th>Roles</th>
+                                <th>Role</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
