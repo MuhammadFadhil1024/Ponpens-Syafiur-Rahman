@@ -34,7 +34,9 @@
                     <x-jet-nav-link href="{{ route('dashboard.management.index') }}" :active="request()->routeIs('dashboard.management.index')">
                         {{ __('Management') }}
                     </x-jet-nav-link>
-                        
+                    <x-jet-nav-link href="{{ route('dashboard.registration.index') }}" :active="request()->routeIs('dashboard.management.index')">
+                        {{ __('Registration') }}
+                    </x-jet-nav-link>
                     @endif
 
                     @if (Auth::user()->roles == 'SANTRI')

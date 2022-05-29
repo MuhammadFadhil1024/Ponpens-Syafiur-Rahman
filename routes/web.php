@@ -14,6 +14,9 @@ use App\Http\Controllers\DivisionTeamController;
 use App\Http\Controllers\FacilityGalleryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ManagementController;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\DocumentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,20 +49,28 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
         Route::resource('event.eventgallery', EventGalleryController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
+
         Route::resource('division', DivisionController::class);
         Route::resource('division.divisiongallery', DivisionGalleryController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
+
         Route::resource('division.divisionteam', DivisionTeamController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
         Route::resource('user', UserController::class);
+
         Route::resource('facility', FacilityController::class);
         Route::resource('facility.facilitygallery', FacilityGalleryController::class)->shallow()->only([
             'index', 'create', 'store', 'destroy'
         ]);
+
         Route::resource('banner', BannerController::class);
         Route::resource('management', ManagementController::class);
+
+        Route::resource('registration', RegistrationController::class);
+
+        Route::resource('document', DocumentController::class);
     });
 
     Route::middleware(['santri'])->group(function () {
