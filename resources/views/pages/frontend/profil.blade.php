@@ -24,7 +24,7 @@
               <p><a href="#" class="btn btn-primary">Learn More</a></p>
             </div>
             <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
-              <a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+                <iframe src="https://www.youtube.com/embed/5lGzHr1lhgw" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
       </div>
       <!-- END row -->
 
-      
+
       <div class="row">
         @foreach ($pengasuh as $pengasuh)
         <div class="col-md-4 col-sm-6">
