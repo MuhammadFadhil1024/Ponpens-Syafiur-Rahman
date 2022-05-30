@@ -8,9 +8,10 @@
             <h3>Media Sosial</h3>
             <ul class="probootstrap-footer-social">
               <li><a href="#"><i class="icon-whatsapp"></i></a></li>
-              <li><a href="#"><i class="icon-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-instagram"></i></a></li>
-              <li><a href="#"><i class="icon-youtube"></i></a></li>
+              <li><a href="https://www.facebook.com/ppmsrjember"><i class="icon-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/ppmsr_jember"><i class="icon-instagram"></i></a></li>
+              <li><a href="https://twitter.com/ppmsr_jember"><i class="icon-twitter"></i></a></li>
+              <li><a href="https://www.youtube.com/c/PPMSyafiurRohmanJember354"><i class="icon-youtube"></i></a></li>
             </ul>
           </div>
         </div>
@@ -22,7 +23,7 @@
               <li><a href="{{ url('event') }}">Event</a></li>
               <li><a href="{{ url('divisi') }}">Divisi</a></li>
               <li><a href="{{ url('artikel') }}">Artikel</a></li>
-              <li><a href="#">Daftar</a></li>
+              <li><a href="{{ url('register') }}">Daftar</a></li>
             </ul>
           </div>
         </div>
@@ -30,14 +31,14 @@
           <div class="probootstrap-footer-widget">
             <h3>Contact Info</h3>
             <ul class="probootstrap-contact-info">
-              <li><i class="icon-location2"></i> <span>Jl. Brantas No.25, Krajan Timur, Sumbersari, Jember</span></li>
+              <li><a href="https://goo.gl/maps/UZRcEyoexHctyhH16"><i class="icon-location2"></i> <span>Jl. Brantas No.25, Krajan Timur, Sumbersari, Jember</span></a></li>
               <li><i class="icon-mail"></i><span>ppmsrjember@gmail.com</span></li>
               <li><i class="icon-phone2"></i><span>+62 823-3835-0709</span></li>
             </ul>
           </div>
         </div>
 
-        
+
 
       </div>
       <!-- END row -->

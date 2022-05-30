@@ -19,16 +19,16 @@
           <div class="probootstrap-flex-block">
             <div class="probootstrap-text probootstrap-animate">
               <div class="text-uppercase probootstrap-uppercase">Featured Events</div>
-              <h3>Students Math Competition for The Year 2017</h3>
-              <p>Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi </p>
+              <h3>#NGONTEN02 NGOBROL INTENS</h3>
+              <p>PPM SYAFI'UR ROHMAN mempersembahkan #NGONTEN atau Ngobrol Intens.</p>
               <p>
-                <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                <span class="probootstrap-date"><i class="icon-calendar"></i>April 30, 2022</span>
+                <span class="probootstrap-location"><i class="icon-location2"></i>PPM Syafi'ur Rohman, Jember</span>
               </p>
               <p><a href="#" class="btn btn-primary">Learn More</a></p>
             </div>
             <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
-              <a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+                <iframe src="https://www.youtube.com/embed/jU5E8IybyRs" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
             </div>
           </div>
         </div>

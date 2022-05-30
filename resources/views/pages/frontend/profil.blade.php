@@ -56,6 +56,7 @@
           <h2>VISI & MISI PPM SYAFI'UR ROHMAN?</h2>
           <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
         </div>
+
       </div>
       <div class="row">
         <div class="col-md-6">

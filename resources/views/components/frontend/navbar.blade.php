@@ -9,9 +9,10 @@
         <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
           <ul>
             <li><a href="#"><i class="icon-whatsapp"></i></a></li>
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-instagram"></i></a></li>
-            <li><a href="#"><i class="icon-youtube"></i></a></li>
+            <li><a href="https://www.facebook.com/ppmsrjember"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/ppmsr_jember"><i class="icon-instagram"></i></a></li>
+            <li><a href="https://twitter.com/ppmsr_jember"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/c/PPMSyafiurRohmanJember354"><i class="icon-youtube"></i></a></li>
             <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
           </ul>
         </div>
@@ -33,7 +34,7 @@
         <a class="navbar-brand" href="{{ url('/') }}" title="ProBootstrap:Enlight">PPM Syafi'ur Rohman</a>
       </div>
 
-      
+
 
       <div id="navbar-collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -48,7 +49,7 @@
               @php($link = App\Models\Event::all())
               @php($uniqyear = $link->unique('year'))
                 @foreach ($uniqyear as $item)
-                  <li><a href="{{route('event', $item->year)}}">{{$item->year}}</a></li>  
+                  <li><a href="{{route('event', $item->year)}}">{{$item->year}}</a></li>
                 @endforeach
             </ul>
           </li>
