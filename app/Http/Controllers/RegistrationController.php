@@ -60,13 +60,18 @@ class RegistrationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RegistrationRequest $request)
+    public function store(RegistrationRequest $request, Registration $registration)
     {
+        $tanggal_lahir = $request->tanggal_lahir;
+
+        $year = Carbon::createFromFormat('d/m/Y', $tanggal_lahir)->format('Y');
+        // dd($year);
 
         Registration::create([
             'name' => $request->name,
             'email' => $request->email,
-            'tempat_lahir' => Carbon::now()->format('d M Y'),
+            'tempat_lahir' => $request->tempat_lahir,
+            'tanggal_lahir' => $tanggal_lahir,
             'address' => $request->address,
             'phone' => $request->phone,
 
@@ -113,9 +118,29 @@ class RegistrationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegistrationRequest $request, Registration $registration)
     {
-        //
+        $data = $request->all();
+
+        $registration->name = $request->name;
+        $registration->email= $request->email;
+        $registration->tempat_lahir = $request->tempat_lahir;
+        $registration->tanggal_lahir = $request->tanggal_lahir;
+        $registration->address = $request->address;
+        $registration->phone = $request->phone;
+
+        $registration->status = $request->status;
+        $registration->asal_pt = $request->asal_pt;
+        $registration->prodi = $request->prodi;
+        $registration->jenjang = $request->jenjang;
+        $registration->angkatan= $request->angkatan;
+
+        $registration->nama_wali = $request->nama_wali;
+        $registration->phone_wali = $request->phone_wali;
+
+        $registration->update($data);
+
+        return redirect()->route('dashboard.registration.index');
     }
 
     /**

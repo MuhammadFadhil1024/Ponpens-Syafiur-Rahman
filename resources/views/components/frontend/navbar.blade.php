@@ -38,21 +38,22 @@
 
       <div id="navbar-collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="{{ url('/') }}">Home</a></li>
-          <li><a href="{{ url('profil') }}">Profil</a></li>
-          <li><a href="{{ url('divisi') }}">Divisi</a></li>
-          <li><a href="{{ url('artikel') }}">Artikel</a></li>
-          <li><a href="{{ url('fasilitas') }}">Fasilitas</a></li>
+          <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
+          <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ url('profil') }}">Profil</a></li>
+          <li class="{{ request()->is('divisi') ? 'active' : '' }}"><a href="{{ url('divisi') }}">Divisi</a></li>
+          <li class="{{ request()->is('artikel') ? 'active' : '' }}"><a href="{{ url('artikel') }}">Artikel</a></li>
+          <li class="{{ request()->is('fasilitas') ? 'active' : '' }}"><a href="{{ url('fasilitas') }}">Fasilitas</a></li>
           <li class="dropdown">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Event</a>
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle ">Event</a>
             <ul class="dropdown-menu">
               @php($link = App\Models\Event::all())
               @php($uniqyear = $link->unique('year'))
                 @foreach ($uniqyear as $item)
-                  <li><a href="{{route('event', $item->year)}}">{{$item->year}}</a></li>
+                  <li ><a href="{{route('event', $item->year)}}">{{$item->year}}</a></li>
                 @endforeach
             </ul>
           </li>
+          <li><a href="{{route('register')}}">Register</a></li>
           <li><a href="{{route('login')}}">Login</a></li>
         </ul>
       </div>

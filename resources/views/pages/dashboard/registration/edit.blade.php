@@ -54,7 +54,7 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Alamat Lengkap</label>
-                            <textarea  name="address"  value="{{old('address') ?? $item->address}}"  class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500"> {!! old('address') !!} </textarea>
+                            <textarea  name="address" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500"> {!! old('address')  ?? $item->address !!} </textarea>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
@@ -67,7 +67,7 @@
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Status</label>
                             <select name="status" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
-                                <option value="{{$item->asal_pt}}">{{$item->asal_pt}}</option>
+                                <option value="{{$item->status}}">{{$item->status}}</option>
                                 <option value="">--------------</option>
                                 <option value="Sudah Diterima Di Perguruan Tinggi">Sudah Diterima Di Perguruan Tinggi</option>
                                 <option value="Masih Dalam Proses Seleksi">Masih Dalam Proses Seleksi</option>
@@ -135,7 +135,7 @@
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
-                                Update Event
+                                Update Register
                            </button>
                         </div>
                     </div>
@@ -143,5 +143,20 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'address' );
+    </script>
+
+    {{-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> --}}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4',
+        });
+    </script>
 </x-app-layout>
 
