@@ -13,7 +13,7 @@
             <li><a href="https://www.instagram.com/ppmsr_jember"><i class="icon-instagram"></i></a></li>
             <li><a href="https://twitter.com/ppmsr_jember"><i class="icon-twitter"></i></a></li>
             <li><a href="https://www.youtube.com/c/PPMSyafiurRohmanJember354"><i class="icon-youtube"></i></a></li>
-            <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
+            {{-- <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li> --}}
           </ul>
         </div>
       </div>

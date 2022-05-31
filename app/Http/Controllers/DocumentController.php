@@ -177,9 +177,39 @@ class DocumentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Registration $registration, Document $document)
     {
-        //
+        dd($document);
+        $foto = $request->file('foto');
+        $ktp = $request->file('ktp');
+        $sk = $request->file('sk');
+        $sp = $request->file('sp');
+
+        if ($request->hasFile('file', 'ktp', 'sk', 'sp') == "") {
+            $old_foto = $document->foto;
+            $old_ktp = $document->ktp;
+            $old_sk = $document->sk;
+            $old_sp = $document->sp;
+
+            $document->foto = $old_foto;
+            $document->ktp = $old_ktp;
+            $document->sk = $old_sk;
+            $document->sp = $old_sp;
+
+            $document->save();
+        } else {
+            $foto_path = $foto->store('public/document');
+            $ktp_path = $ktp->store('public/document');
+            $sk_path = $sk->store('public/document');
+            $sp_path = $sp->store('public/document');
+
+            $document->foto = $foto_path;
+            $document->ktp = $ktp_path;
+            $document->sk = $sk_path;
+            $document->sp = $sp_path;
+
+            $document->save();
+        }
     }
 
     /**

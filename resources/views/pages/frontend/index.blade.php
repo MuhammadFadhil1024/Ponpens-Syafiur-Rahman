@@ -121,8 +121,8 @@
     </div>
     <div class="probootstrap-tab-style-1">
       <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border">
-        <li class="active"><a data-toggle="tab" href="#featured-news">Artikel PPM SR</a></li>
-        <li><a data-toggle="tab" href="#upcoming-events">Divisi PPM SR</a></li>
+        <li class="active"><a data-toggle="tab" href="#featured-news">Divisi PPM SR</a></li>
+        <li><a data-toggle="tab" href="#upcoming-events">Artikel PPM SR</a></li>
       </ul>
     </div>
   </section>
@@ -145,7 +145,7 @@
                   @endphp --}}
                       <div class="item">
                         <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
-                          <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                          <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
                           <div class="probootstrap-text">
                             <h3>{{$item->name}}</h3>
                             <p>{!! Str::limit($item->description, 200) !!}</p>
@@ -162,7 +162,7 @@
               <!-- BUTTON ARTIKEL PPM SR -->
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <p><a href="#" class="btn btn-primary">View all news</a></p>
+                  <p><a href="{{route('divisi')}}" class="btn btn-primary">Lihat semua divisi</a></p>
                 </div>
               </div>
               <!-- END BUTTON ARTIKEL PPM SR -->
@@ -173,56 +173,28 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="owl-carousel" id="owl2">
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_2.jpg')}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- END item -->
-                    <div class="item">
-                      <a href="#" class="probootstrap-featured-news-box">
-                        <figure class="probootstrap-media"><img src="{{ url('frontend/enlight-master/img/img_sm_3.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
-                        <div class="probootstrap-text">
-                          <h3>Tempora consectetur unde nisi</h3>
-                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
-                        </div>
-                      </a>
-                    </div>
+                    @foreach ($news as $item)
+                    {{-- @php
+                        dd($item);
+                    @endphp --}}
+                      <div class="item">
+                        <a href="{{route('detailartikel', $item->slug)}}" class="probootstrap-featured-news-box">
+                          <figure class="probootstrap-media"><img src="{{ Storage::url($item->link) }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
+                          <div class="probootstrap-text">
+                            <h3>{{$item->title}}</h3>
+                            <p>{!! Str::limit($item->content, 150) !!}</p>
+                            <span class="probootstrap-date"><i class="icon-calendar"></i>{{$item->published}}</span>
+                          </div>
+                        </a>
+                      </div>
+                    @endforeach
                     <!-- END item -->
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <p><a href="#" class="btn btn-primary">View all events</a></p>
+                  <p><a href="{{route('artikel')}}" class="btn btn-primary">Lihat semua artikel</a></p>
                 </div>
               </div>
             </div>
@@ -314,15 +286,17 @@
         <div class="col-md-12 probootstrap-animate">
           <div class="owl-carousel owl-carousel-testimony owl-carousel-fullwidth">
 
-            <div class="item">
-              <div class="probootstrap-testimony-wrap text-center">
-                <figure>
-                  <img src="{{ url('frontend/enlight-master/img/person_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
-                </figure>
-                <blockquote class="quote">&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.&rdquo; <cite class="author"> &mdash; <span>Mike Fisher</span></cite></blockquote>
+            @foreach ($alumnis as $item)
+              <div class="item">
+                <div class="probootstrap-testimony-wrap text-center">
+                  <figure>
+                    <img src="{{Storage::url($item->url)}} " alt="Free Bootstrap Template by ProBootstrap.com">
+                  </figure>
+                  <blockquote class="quote">{!! $item->content !!}<cite class="author"> &mdash; <span>{{$item->name}}</span></cite></blockquote>
+                </div>
               </div>
-            </div>
-            <div class="item">
+            @endforeach
+            {{-- <div class="item">
               <div class="probootstrap-testimony-wrap text-center">
                 <figure>
                   <img src="{{ url('frontend/enlight-master/img/person_2.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
@@ -337,7 +311,7 @@
                 </figure>
                 <blockquote class="quote">&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly.&rdquo; <cite class="author">&mdash; <span>Brandon White</span></cite></blockquote>
               </div>
-            </div>
+            </div> --}}
 
           </div>
         </div>
@@ -345,8 +319,4 @@
       <!-- END row -->
     </div>
   </section>
-
-
-
-
 @endsection
