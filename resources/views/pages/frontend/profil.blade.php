@@ -122,7 +122,7 @@
         <div class="col-md-4 col-sm-6">
           <div class="probootstrap-teacher text-center probootstrap-animate">
             <figure class="media">
-              <img src="{{ Storage::url($binkon->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+              <img src="{{ Storage::url($binkon->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-custom">
             </figure>
             <div class="text">
               <h6>{{$binkon->name}}</h6>
@@ -157,7 +157,7 @@
         <div class="col-md-4 col-sm-6">
           <div class="probootstrap-teacher text-center probootstrap-animate">
             <figure class="media">
-              <img src="{{ Storage::url($binkon->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+              <img src="{{ Storage::url($guru->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
             </figure>
             <div class="text">
               <h6>{{$guru->name}}</h6>

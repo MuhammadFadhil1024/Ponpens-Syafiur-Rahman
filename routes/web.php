@@ -70,15 +70,12 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
 
         Route::resource('banner', BannerController::class);
         Route::resource('management', ManagementController::class);
-<<<<<<< Updated upstream
 
         Route::resource('registration', RegistrationController::class);
 
         Route::resource('document', DocumentController::class);
 
         Route::resource('alumni', AlumniController::class);
-=======
->>>>>>> Stashed changes
     });
 
     Route::middleware(['santri'])->group(function () {

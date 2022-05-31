@@ -313,15 +313,14 @@
       <div class="row">
         <div class="col-md-12 probootstrap-animate">
           <div class="owl-carousel owl-carousel-testimony owl-carousel-fullwidth">
-            <div class="item">
 
+            <div class="item">
               <div class="probootstrap-testimony-wrap text-center">
                 <figure>
                   <img src="{{ url('frontend/enlight-master/img/person_1.jpg') }}" alt="Free Bootstrap Template by ProBootstrap.com">
                 </figure>
                 <blockquote class="quote">&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.&rdquo; <cite class="author"> &mdash; <span>Mike Fisher</span></cite></blockquote>
               </div>
-
             </div>
             <div class="item">
               <div class="probootstrap-testimony-wrap text-center">

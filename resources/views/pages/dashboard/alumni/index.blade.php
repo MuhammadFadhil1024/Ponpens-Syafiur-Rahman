@@ -15,7 +15,6 @@
                 columns: [
                     {data : 'id', name: 'id', width: '5%'},
                     {data : 'name', name: 'name'},
-                    {data : 'content', name: 'content'},
                     {data : 'url', name: 'url'},
                     {
                         data : 'action',
@@ -44,7 +43,6 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nama</th>
-                                <th>Testimoni</th>
                                 <th>Foto</th>
                                 <th>Aksi</th>
                             </tr>

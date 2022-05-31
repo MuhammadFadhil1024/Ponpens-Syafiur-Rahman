@@ -34,17 +34,17 @@
                     <x-jet-nav-link href="{{ route('dashboard.management.index') }}" :active="request()->routeIs('dashboard.management.index')">
                         {{ __('Pengurus') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard.registration.index') }}" :active="request()->routeIs('dashboard.management.index')">
+                    <x-jet-nav-link href="{{ route('dashboard.registration.index') }}" :active="request()->routeIs('dashboard.registration.index')">
                         {{ __('Registration') }}
                     </x-jet-nav-link>
                     @endif
 
                     @if (Auth::user()->roles == 'SANTRI')
-                    <x-jet-nav-link href="{{ route('dashboard.article.index') }}" :active="request()->routeIs('dashboard.event.index')">
+                    <x-jet-nav-link href="{{ route('dashboard.article.index') }}" :active="request()->routeIs('dashboard.article.index')">
                         {{ __('Artikel') }}
                     </x-jet-nav-link>
                     @endif
-                    
+
                     @if (Auth::user()->roles == 'USER')
                             <x-jet-nav-link href="{{ route('dashboard.registration.index') }}" :active="request()->routeIs('dashboard.registration.index')">
                                 {{ __('Daftar') }}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Alumni;
 use App\Models\Banner;
 use App\Models\Division;
 use App\Models\Event;
@@ -23,8 +24,11 @@ class FrontendController extends Controller
         // dd($divisions);
         $news = Article::with(['user'])->InRandomOrder()->limit(6)->get();
         // dd($news);
+        $alumnis = Alumni::all();
+        // dd($alumnis);
 
-        return view('pages.frontend.index', compact('banners', 'managements', 'articles', 'divisions', 'news'));
+
+        return view('pages.frontend.index', compact('banners', 'managements', 'articles', 'divisions', 'news', 'alumnis'));
     }
 
     public function profil(Request $request)

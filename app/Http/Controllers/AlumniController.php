@@ -22,6 +22,7 @@ class AlumniController extends Controller
             // $removetag = strip_tags($query->description);
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
+                    // dd($item);
                     return '
                         <div class="flex space-x-4 justify-center">
                         <a href="' . route('dashboard.alumni.edit', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
@@ -120,9 +121,11 @@ class AlumniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alumni $alumni)
+    public function destroy(Alumni $alumnus)
     {
-        $alumni->delete();
+        // return $alumnus;
+
+        $alumnus->delete();
 
         return redirect()->route('dashboard.alumni.index');
     }
