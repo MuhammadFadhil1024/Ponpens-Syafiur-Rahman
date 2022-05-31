@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Route;
@@ -71,6 +72,8 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
         Route::resource('registration', RegistrationController::class);
 
         Route::resource('document', DocumentController::class);
+
+        Route::resource('alumni', AlumniController::class);
     });
 
     Route::middleware(['santri'])->group(function () {
