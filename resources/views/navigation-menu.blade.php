@@ -44,6 +44,12 @@
                         {{ __('Artikel') }}
                     </x-jet-nav-link>
                     @endif
+                    
+                    @if (Auth::user()->roles == 'USER')
+                            <x-jet-nav-link href="{{ route('dashboard.registration.index') }}" :active="request()->routeIs('dashboard.registration.index')">
+                                {{ __('Daftar') }}
+                            </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 

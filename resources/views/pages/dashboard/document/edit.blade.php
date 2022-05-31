@@ -24,33 +24,33 @@
                         </div>
                     </div>
                 @endif
-                <form action="{{route('dashboard.registration.document.store', $registration->id)}}" method="post" class="w-full" enctype="multipart/form-data">
+                <form action="{{route('dashboard.registration.document.update', [$document, $registration])}}" method="post" class="w-full" enctype="multipart/form-data">
                     @csrf
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">Foto 3X4</label>
                             <label class="block uppercase tracking-wide text-red-700 text-xs font-bold mb-2">Background Merah, Berjas Hitam, Kemeja Putih dan Berkerudung Hitam</label>
-                            <input type="file" name="foto" multiple placeholder="Foto 3X4" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <input type="file" name="foto" value="{{old('url') ?? $document->foto}}" multiple placeholder="Foto 3X4" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">Foto KTP</label>
-                            <input type="file" name="ktp" multiple placeholder="ktp" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <input type="file" name="ktp" value="{{old('url') ?? $document->ktp}}" multiple placeholder="ktp" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">Surat Pernyataan</label>
                             <label class="block uppercase tracking-wide text-red-700 text-xs font-bold mb-2"  ><a href="#">Link Download Surat Pernyataan</a></label>
-                            <input type="file" name="sp" multiple placeholder="Surat Pernyataan" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <input type="file" name="sp" value="{{old('url') ?? $document->sp}}" multiple placeholder="Surat Pernyataan" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">Surat Keterangan</label>
                             <label class="block uppercase tracking-wide text-red-700 text-xs font-bold mb-2"  ><a href="#">Link Download Surat Keterangan</a></label>
-                            <input type="file" name="sk" multiple placeholder="Surat Keterangan" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
+                            <input type="file" name="sk" value="{{old('url') ?? $document->sk}}" multiple placeholder="Surat Keterangan" accept="image" class="block w-full bg-gray-200 text-gray-700 border-gray-200 rounded py-3 px-4 leading-text focus:ooutline-none focus:bg-white focus:border-gray-500">
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">

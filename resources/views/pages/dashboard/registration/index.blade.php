@@ -22,7 +22,21 @@
                         ordertable : false,
                         searchable : false,
                         width : '25%'
-                    }
+                    },
+                    {
+                        data : 'button',
+                        name : 'button',
+                        ordertable : false,
+                        searchable : false,
+                        width : '25%'
+                    },
+                    // {
+                    //     data : 'assignment',
+                    //     name : 'assignment',
+                    //     ordertable : false,
+                    //     searchable : false,
+                    //     width : '25%'
+                    // },
                 ],
             })
         </script>
@@ -44,6 +58,9 @@
                                 <th>Nama</th>
                                 <th>Keterangan</th>
                                 <th>Aksi</th>
+                                <th>Tahap</th>
+                                {{-- <th>Berkas</th> --}}
+                                {{-- <th>Assignment</th> --}}
                             </tr>
                         </thead>
                         <tbody></tbody>

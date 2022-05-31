@@ -41,7 +41,6 @@ class EventController extends Controller
                             ';
                 })
                 ->rawColumns(['action'])
-                ->editColumn('description', '{{ strip_tags($description) }}')
                 ->make();
         }
         return view('pages.dashboard.event.index');

@@ -17,19 +17,21 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Registration $registration, Document $document)
     {
+        $cek = Document::where('registrations_id', $registration->id)->exists();
+        // dd($cek);
         if (request()->ajax()) {
-            $query = Document::query();
-            // $removetag = strip_tags($query->description);
+            $query = Document::where('registrations_id', $registration->id);
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
+                    // dd($item->id);
                     return '
                             <div class="flex space-x-4 justify-center">
-                                <a href="' . route('dashboard.document.edit', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
+                                <a href="' . route('dashboard.registration.document.edit', ['registration' => $item->registrations_id, 'document' => $item->id]) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
                                     Edit
                                 </a>
-                                <form class="" action="' . route('dashboard.document.destroy', $item->id) . '" method="POST">
+                                <form class="" action="' . route('dashboard.registration.document.destroy', ['registration' => $item->registrations_id, 'document' => $item->id]) . '" method="POST">
                                     <button class=" bg-red-600 text-white rounded-md px-2 py-1 m-2">
                                         Delete
                                     </button>
@@ -39,21 +41,21 @@ class DocumentController extends Controller
                             ';
                 })
                 ->editColumn('foto', function ($item) {
-                    return '<img style="max-width: 150px" src="' . Storage::foto($item->foto) . '"/>';
+                    return '<img style="max-width: 150px" src="' . Storage::url($item->foto) . '"/>';
                 })
                 ->editColumn('ktp', function ($item) {
-                    return '<img style="max-width: 150px" src="' . Storage::ktp($item->ktp) . '"/>';
+                    return '<img style="max-width: 150px" src="' . Storage::url($item->ktp) . '"/>';
                 })
                 ->editColumn('sp', function ($item) {
-                    return '<img style="max-width: 150px" src="' . Storage::sp($item->sp) . '"/>';
+                    return '<img style="max-width: 150px" src="' . Storage::url($item->sp) . '"/>';
                 })
                 ->editColumn('sk', function ($item) {
-                    return '<img style="max-width: 150px" src="' . Storage::sk($item->sk) . '"/>';
+                    return '<img style="max-width: 150px" src="' . Storage::url($item->sk) . '"/>';
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'foto', 'ktp', 'sp', 'sk'])
                 ->make();
         }
-        return view('pages.dashboard.document.index');
+        return view('pages.dashboard.document.index', compact('registration', 'document', 'cek'));
     }
 
     /**
@@ -61,9 +63,10 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Registration $registration)
     {
-        return view('pages.dashboard.document.create');
+        // dd($registration->id);
+        return view('pages.dashboard.document.create', compact('registration'));
     }
 
     /**
@@ -72,54 +75,72 @@ class DocumentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Document $request, Registration $registration)
+    public function store(DocumentRequest $request, Registration $registration)
     {
+        // dd($registration->id);
         $foto = $request->file('foto');
-
-        if ($request->hasFile('foto')) {
-            $path = $foto->store('public/document');
-
-            Document::create([
-                'registration_id' => $registration->id,
-                'foto' => $path,
-            ]);
-        }
-
         $ktp = $request->file('ktp');
-
-        if ($request->hasFile('ktp')) {
-            $path = $ktp->store('public/document');
-
-            Document::create([
-                'registration_id' => $registration->id,
-                'ktp' => $path,
-            ]);
-        }
-
         $sk = $request->file('sk');
-
-        if ($request->hasFile('sk')) {
-            $path = $sk->store('public/document');
-
-            Document::create([
-                'registration_id' => $registration->id,
-                'sk' => $path,
-            ]);
-        }
-
         $sp = $request->file('sp');
 
-        if ($request->hasFile('sp')) {
-            $path = $sp->store('public/document');
+        if ($request->hasFile('foto', 'ktp', 'sk', 'sp')) {
+            $foto_path = $foto->store('public/document');
+            $ktp_path = $ktp->store('public/document');
+            $sk_path = $sk->store('public/document');
+            $sp_path = $sp->store('public/document');
 
             Document::create([
-                'registration_id' => $registration->id,
-                'sp' => $path,
+                'registrations_id' => $registration->id,
+                'foto' => $foto_path,
+                'ktp'  => $ktp_path,
+                'sp' => $sp_path,
+                'sk' => $sk_path
             ]);
         }
 
-        return redirect()->route('dashboard.document.index', $registration->id);
+        // if ($request->hasFile('foto')) {
+        //     $path = $foto->store('public/document');
 
+        //     Document::create([
+        //         'registration_id' => $registration->id,
+        //         'foto' => $path,
+        //     ]);
+        // }
+
+        // $ktp = $request->file('ktp');
+
+        // if ($request->hasFile('ktp')) {
+        //     $path = $ktp->store('public/document');
+
+        //     Document::create([
+        //         'registration_id' => $registration->id,
+        //         'ktp' => $path,
+        //     ]);
+        // }
+
+        // $sk = $request->file('sk');
+
+        // if ($request->hasFile('sk')) {
+        //     $path = $sk->store('public/document');
+
+        //     Document::create([
+        //         'registration_id' => $registration->id,
+        //         'sk' => $path,
+        //     ]);
+        // }
+
+        // $sp = $request->file('sp');
+
+        // if ($request->hasFile('sp')) {
+        //     $path = $sp->store('public/document');
+
+        //     Document::create([
+        //         'registration_id' => $registration->id,
+        //         'sp' => $path,
+        //     ]);
+        // }
+
+        return redirect()->route('dashboard.registration.document.index', $registration->id);
     }
 
 
@@ -140,9 +161,13 @@ class DocumentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Registration $registration, Document $document)
     {
-        //
+        // dd($document);
+        return view('pages.dashboard.document.edit', [
+            'registration' => $registration,
+            'document' => $document
+        ]);
     }
 
     /**
