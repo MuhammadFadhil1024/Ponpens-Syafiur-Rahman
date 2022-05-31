@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DataDiriController;
 use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\DivisionGalleryController;
 use App\Http\Controllers\DivisionTeamController;
@@ -68,16 +70,25 @@ Route::middleware(['auth:sanctum', 'verified'])->name('dashboard.')->prefix('das
 
         Route::resource('banner', BannerController::class);
         Route::resource('management', ManagementController::class);
+<<<<<<< Updated upstream
 
         Route::resource('registration', RegistrationController::class);
 
         Route::resource('document', DocumentController::class);
 
         Route::resource('alumni', AlumniController::class);
+=======
+>>>>>>> Stashed changes
     });
 
     Route::middleware(['santri'])->group(function () {
         Route::resource('article', ArticleController::class);
+    });
+
+    Route::middleware(['user'])->group(function () {
+        Route::resource('registration', RegistrationController::class);
+        Route::resource('registration.assigntment', AssignmentController::class);
+        Route::resource('registration.document', DocumentController::class);
     });
 });
 

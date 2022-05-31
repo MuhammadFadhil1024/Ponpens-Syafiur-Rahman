@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RegistrationRequest;
-use App\Models\Registration;
 use Carbon\Carbon;
+use App\Models\User;
+use App\Models\Registration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\RegistrationRequest;
+use App\Models\Document;
 
 class RegistrationController extends Controller
 {
@@ -19,13 +21,14 @@ class RegistrationController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Registration::query();
+            $query = Registration::where('users_id', Auth::user()->id);
             // $removetag = strip_tags($query->description);
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
+                    // dd($id);
                     return '
                             <div class="flex space-x-4 justify-center">
-                                <a href="' . route('dashboard.registration.edit', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
+                                <a href="' . route('dashboard.registration.index', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
                                     Edit
                                 </a>
                                 <form class="" action="' . route('dashboard.registration.destroy', $item->id) . '" method="POST">
@@ -37,7 +40,28 @@ class RegistrationController extends Controller
                             </div>
                             ';
                 })
-                ->rawColumns(['action'])
+                ->addColumn('button', function ($item) {
+                    // dd($item->id);
+                    if ($item->status == 'document') {
+                        return '
+                        <div class="flex space-x-4 justify-center">
+                            <a href="' . route('dashboard.registration.document.index', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
+                                Document
+                            </a>
+                        </div>
+                        ';
+                    }
+                    if ($item->status == 'assignment') {
+                        return '
+                        <div class="flex space-x-4 justify-center">
+                        <a href="' . route('dashboard.registration.assigntment.index', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
+                            Pemberkasan
+                        </a>
+                    </div>
+                        ';
+                    }
+                })
+                ->rawColumns(['action', 'button', 'assignment'])
                 ->make();
         }
 
@@ -60,6 +84,7 @@ class RegistrationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+<<<<<<< Updated upstream
     public function store(RegistrationRequest $request, Registration $registration)
     {
         $tanggal_lahir = $request->tanggal_lahir;
@@ -72,6 +97,15 @@ class RegistrationController extends Controller
             'email' => $request->email,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $tanggal_lahir,
+=======
+    public function store(RegistrationRequest $request, User $user)
+    {
+        Registration::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'users_id' => Auth::user()->id,
+            'tempat_lahir' => Carbon::now()->format('d M Y'),
+>>>>>>> Stashed changes
             'address' => $request->address,
             'phone' => $request->phone,
 
@@ -107,7 +141,7 @@ class RegistrationController extends Controller
     public function edit(Registration $registration)
     {
         return view('pages.dashboard.registration.edit', [
-            'item' => $registration
+            'item' => $registration,
         ]);
     }
 
