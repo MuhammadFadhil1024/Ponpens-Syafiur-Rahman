@@ -12,11 +12,11 @@ class Registration extends Model
 
     protected $fillable = [
         'name', 'email', 'tempat_lahir', 'tanggal_lahir', 'address', 'phone', 'status', 'asal_pt', 'prodi',
-        'jenjang', 'angkatan', 'nama_wali', 'phone_wali'
+        'jenjang', 'angkatan', 'nama_wali', 'phone_wali', 'users_id'
     ];
 
-    public function document()
-    {
-        return $this->hasMany(Document::class, 'registrations_id', 'id');
-    }
+    // public function document()
+    // {
+    //     return $this->hasMany(Document::class, 'registrations_id', 'id');
+    // }
 }

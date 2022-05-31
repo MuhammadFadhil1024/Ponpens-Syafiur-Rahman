@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('assignments', function (Blueprint $table) {
             $table->id();
 
-            $table->bigInteger('users_id');
+            $table->string('registrations_id');
 
             $table->string('writing');
             $table->string('reading');

@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
-class DocumentRequest extends FormRequest
+class AssignmntRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,11 +25,8 @@ class DocumentRequest extends FormRequest
     public function rules()
     {
         return [
-            'foto' => 'required|image',
-            'ktp' => 'required|image',
-            'sp.*' => 'required|image',
-            'sk.*' => 'required|image',
-            // 'registrations_id' => 'required'
+            'writing' => 'required|image',
+            'reading' => 'required'
         ];
     }
 }

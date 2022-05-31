@@ -11,6 +11,6 @@ class Document extends Model
     use HasFactory;
 
     protected $fillable = [
-        'foto', 'ktp', 'sk', 'sp'
+        'registrations_id', 'foto', 'ktp', 'sk', 'sp',
     ];
 }
