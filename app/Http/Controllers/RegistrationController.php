@@ -42,7 +42,7 @@ class RegistrationController extends Controller
                 })
                 ->addColumn('button', function ($item) {
                     // dd($item->id);
-                    if ($item->status == 'document') {
+                    if ($item->keterangan == 'document') {
                         return '
                         <div class="flex space-x-4 justify-center">
                             <a href="' . route('dashboard.registration.document.index', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
@@ -51,7 +51,7 @@ class RegistrationController extends Controller
                         </div>
                         ';
                     }
-                    if ($item->status == 'assignment') {
+                    if ($item->keterangan == 'assignment') {
                         return '
                         <div class="flex space-x-4 justify-center">
                         <a href="' . route('dashboard.registration.assigntment.index', $item->id) . '" class="bg-gray-500 text-white rounded-md px-2 py-1 m-2">
@@ -84,20 +84,6 @@ class RegistrationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-<<<<<<< Updated upstream
-    public function store(RegistrationRequest $request, Registration $registration)
-    {
-        $tanggal_lahir = $request->tanggal_lahir;
-
-        $year = Carbon::createFromFormat('d/m/Y', $tanggal_lahir)->format('Y');
-        // dd($year);
-
-        Registration::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'tempat_lahir' => $request->tempat_lahir,
-            'tanggal_lahir' => $tanggal_lahir,
-=======
     public function store(RegistrationRequest $request, User $user)
     {
         Registration::create([
@@ -105,10 +91,8 @@ class RegistrationController extends Controller
             'email' => $request->email,
             'users_id' => Auth::user()->id,
             'tempat_lahir' => Carbon::now()->format('d M Y'),
->>>>>>> Stashed changes
             'address' => $request->address,
             'phone' => $request->phone,
-
             'status' => $request->status,
             'asal_pt' => $request->asal_pt,
             'prodi' => $request->prodi,
@@ -157,7 +141,7 @@ class RegistrationController extends Controller
         $data = $request->all();
 
         $registration->name = $request->name;
-        $registration->email= $request->email;
+        $registration->email = $request->email;
         $registration->tempat_lahir = $request->tempat_lahir;
         $registration->tanggal_lahir = $request->tanggal_lahir;
         $registration->address = $request->address;
@@ -167,7 +151,7 @@ class RegistrationController extends Controller
         $registration->asal_pt = $request->asal_pt;
         $registration->prodi = $request->prodi;
         $registration->jenjang = $request->jenjang;
-        $registration->angkatan= $request->angkatan;
+        $registration->angkatan = $request->angkatan;
 
         $registration->nama_wali = $request->nama_wali;
         $registration->phone_wali = $request->phone_wali;
