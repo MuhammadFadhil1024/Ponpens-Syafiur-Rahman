@@ -36,7 +36,7 @@
             @if (!$cek)
                 <div class="mb-10">
                     <a href="{{route('dashboard.registration.assigntment.create', $registration->id)}}"  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow-lg">
-                        + tambah file tes
+                        + Tambah File Tes
                     </a>
                 </div>
             @endif
