@@ -39,7 +39,9 @@ class FrontendController extends Controller
 
         $guru = Management::where('position', 'GURU')->get();
 
-        return view('pages.frontend.profil', compact('pengasuh', 'binkons', 'guru'));
+        $fasilitas = Facility::with(['fasilitasgallery'])->limit(6)->get();
+
+        return view('pages.frontend.profil', compact('pengasuh', 'binkons', 'guru', 'fasilitas'));
     }
 
     public function event(Request $request, $year)

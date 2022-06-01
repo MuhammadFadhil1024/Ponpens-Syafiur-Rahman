@@ -14,7 +14,7 @@
           @foreach ($fasilitas as $item)
             <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
                 <a href="{{route('detailfasilitas', $item->slug)}}" class="probootstrap-featured-news-box">
-                <figure class="probootstrap-media"><img src="{{$item->fasilitasgallery()->exists() ? Storage::url($item->fasilitasgallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                <figure class="probootstrap-media"><img src="{{$item->fasilitasgallery()->exists() ? Storage::url($item->fasilitasgallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
                 <div class="probootstrap-text">
                     <h3>{{$item->name}}</h3>
                 </div>

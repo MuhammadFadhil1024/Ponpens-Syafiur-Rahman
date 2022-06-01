@@ -145,7 +145,7 @@
                   @endphp --}}
                       <div class="item">
                         <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
-                          <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
+                          <figure class="probootstrap-media"><img src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
                           <div class="probootstrap-text">
                             <h3>{{$item->name}}</h3>
                             <p>{!! Str::limit($item->description, 200) !!}</p>
@@ -255,7 +255,7 @@
         <div class="col-md-3 col-sm-6">
           <div class="probootstrap-teacher text-center probootstrap-animate">
             <figure class="media">
-              <img src="{{ Storage::url($management->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+              <img src="{{ Storage::url($management->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-custom">
             </figure>
             <div class="text">
               <h6>{{$management->name}}</h6>
