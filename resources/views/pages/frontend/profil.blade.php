@@ -19,8 +19,8 @@
           <div class="probootstrap-flex-block">
             <div class="probootstrap-text probootstrap-animate">
               <div class="text-uppercase probootstrap-uppercase">History</div>
-              <h3>Take A Look at How We Begin</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+              <h3>Sejarah PPM Syafi'ur Rohman</h3>
+              <p>PPM Syafi'ur Rohman berkomitmen mendidik karakter bangsa melalui pendidikan yang berbasis agama demi menciptakan generasi penerus bangsa dari kalangan mahasiswa yang profesional, religius, serta berdaya juang tinggi.</p>
               <p><a href="#" class="btn btn-primary">Learn More</a></p>
             </div>
             <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
@@ -41,7 +41,7 @@
         </p>
       </div>
       <div class="col-md-6 col-md-push-1">
-        <h2>We are NYC based School focused on excellence.</h2>
+        <h2>PPM Syafi'ur Rohman</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
         <p>Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
       </div>

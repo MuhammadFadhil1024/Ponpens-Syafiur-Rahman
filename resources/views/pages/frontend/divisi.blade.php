@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
               <h2>Divisi PPM Syafi'ur Rohman</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <p class="lead">Berikut ini merupakan divisi pada PPM Syafi'ur Rohman</p>
             </div>
           </div>
       <div class="row">

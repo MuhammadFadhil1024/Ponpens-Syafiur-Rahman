@@ -251,7 +251,7 @@
                   <figure>
                     <img src="{{Storage::url($item->url)}} " alt="Free Bootstrap Template by ProBootstrap.com">
                   </figure>
-                  <blockquote class="quote">{!! $item->content !!}<cite class="author"> &mdash; <span>{{$item->name}}</span></cite></blockquote>
+                  <blockquote class="quote">{!! $item->content !!}<cite class="author"> &mdash; <span>{{$item->name}}</span>&mdash; </cite></blockquote>
                 </div>
               </div>
             @endforeach

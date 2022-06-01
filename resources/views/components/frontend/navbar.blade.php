@@ -53,9 +53,11 @@
             </ul>
           </li>
           {{-- <li class="{{ request()->is('fasilitas') ? 'active' : '' }}"><a href="{{ url('fasilitas') }}">Fasilitas</a></li> --}}
+
           @auth
             <li class="{{ request()->is('dashboard.index') ? 'active' : '' }}"><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
           @endauth
+
           @guest
             <li><a href="{{route('register')}}">Register</a></li>
             <li><a href="{{route('login')}}">Login</a></li>
