@@ -42,10 +42,6 @@
           <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ url('profil') }}">Profil</a></li>
           <li class="{{ request()->is('divisi') ? 'active' : '' }}"><a href="{{ url('divisi') }}">Divisi</a></li>
           <li class="{{ request()->is('artikel') ? 'active' : '' }}"><a href="{{ url('artikel') }}">Artikel</a></li>
-          {{-- <li class="{{ request()->is('fasilitas') ? 'active' : '' }}"><a href="{{ url('fasilitas') }}">Fasilitas</a></li> --}}
-          @auth
-            <li class="{{ request()->is('dashboard.index') ? 'active' : '' }}"><a href="{{ route('dashboard.index') }}">Dashboard</a></li>    
-          @endauth
           <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle ">Event</a>
             <ul class="dropdown-menu">
@@ -56,6 +52,10 @@
                 @endforeach
             </ul>
           </li>
+          {{-- <li class="{{ request()->is('fasilitas') ? 'active' : '' }}"><a href="{{ url('fasilitas') }}">Fasilitas</a></li> --}}
+          @auth
+            <li class="{{ request()->is('dashboard.index') ? 'active' : '' }}"><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
+          @endauth
           @guest
             <li><a href="{{route('register')}}">Register</a></li>
             <li><a href="{{route('login')}}">Login</a></li>

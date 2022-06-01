@@ -159,7 +159,7 @@
               <!-- BUTTON ARTIKEL PPM SR -->
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <p><a href="{{route('divisi')}}" class="btn btn-primary">Lihat semua divisi</a></p>
+                  <p><a href="{{route('divisi')}}" class="btn btn-primary">Lihat Semua Divisi</a></p>
                 </div>
               </div>
               <!-- END BUTTON ARTIKEL PPM SR -->
@@ -171,9 +171,6 @@
                 <div class="col-md-12">
                   <div class="owl-carousel" id="owl2">
                     @foreach ($news as $item)
-                    {{-- @php
-                        dd($item);
-                    @endphp --}}
                       <div class="item">
                         <a href="{{route('detailartikel', $item->slug)}}" class="probootstrap-featured-news-box">
                           <figure class="probootstrap-media"><img src="{{ Storage::url($item->link) }}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
@@ -191,7 +188,7 @@
               </div>
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <p><a href="{{route('artikel')}}" class="btn btn-primary">Lihat semua artikel</a></p>
+                  <p><a href="{{route('artikel')}}" class="btn btn-primary">Lihat Semua Artikel</a></p>
                 </div>
               </div>
             </div>
@@ -204,7 +201,7 @@
     </div>
   </section>
 
-  <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+  {{-- <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
@@ -233,7 +230,7 @@
         @endforeach
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <section class="probootstrap-section probootstrap-bg probootstrap-section-colored probootstrap-testimonial" style="background-image: url({{ url('frontend/enlight-master/img/slider_4.jpg') }});">
     <div class="container">
