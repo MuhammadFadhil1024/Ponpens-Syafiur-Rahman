@@ -11,16 +11,30 @@
             </div>
           </div>
       <div class="row">
-        @foreach ($divisions as $division)
-          <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-            <a href="{{route('detaildivisi', $division->slug)}}" class="probootstrap-featured-news-box">
-              <figure class="probootstrap-media"><img height="500px" src="{{$division->divisiongallery()->exists() ? Storage::url($division->divisiongallery->first()->url) : url('frontend/enlight-master/img/img_sm_1.jpg')}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
+
+        @foreach ($divisions as $item)
+        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+            <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
+              <figure class="probootstrap-media"><img height="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
               <div class="probootstrap-text">
-                <h3>{{$division->name}}</h3>
+                <h3>{{$item->name}}</h3>
+                <p>{!! Str::limit($item->description, 100) !!}</p>
               </div>
             </a>
-          </div>
+        </div>
         @endforeach
+
+        {{-- @foreach ($divisions as $item)
+          <div class="col-md-4 col-sm-6 col-xs-12 col-xxs-12 probootstrap-animate" >
+            <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                  <h3>{{$item->name}}</h3>
+                  <p>{!! Str::limit($item->description, 150) !!}</p>
+                </div>
+            </a>
+          </div>
+        @endforeach --}}
         <div class="clearfix visible-sm-block visible-xs-block"></div>
       </div>
     </div>

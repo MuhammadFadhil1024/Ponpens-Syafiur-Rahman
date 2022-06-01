@@ -139,16 +139,13 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="owl-carousel" id="owl1">
-                  @foreach ($divisions as $item)
-                  {{-- @php
-                      dd($item)
-                  @endphp --}}
+                      @foreach ($divisions as $item)
                       <div class="item">
                         <a href="{{route('detaildivisi', $item->slug)}}" class="probootstrap-featured-news-box">
-                          <figure class="probootstrap-media"><img src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
+                          <figure class="probootstrap-media"><img width="200px" src="{{$item->divisiongallery()->exists() ? Storage::url($item->divisiongallery->first()->url) : "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="}}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-index"></figure>
                           <div class="probootstrap-text">
                             <h3>{{$item->name}}</h3>
-                            <p>{!! Str::limit($item->description, 200) !!}</p>
+                            <p>{!! Str::limit($item->description, 150) !!}</p>
                           </div>
                         </a>
                       </div>
@@ -238,41 +235,6 @@
     </div>
   </section>
 
-
-
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-          <h2>Pengasuh Pondok Pesantren</h2>
-          <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
-        </div>
-      </div>
-      <!-- END row -->
-
-      <div class="row">
-      @foreach ($managements as $management)
-        <div class="col-md-3 col-sm-6">
-          <div class="probootstrap-teacher text-center probootstrap-animate">
-            <figure class="media">
-              <img src="{{ Storage::url($management->url) }}"alt="Free Bootstrap Template by ProBootstrap.com" class="img-custom">
-            </figure>
-            <div class="text">
-              <h6>{{$management->name}}</h6>
-              <p>{{$management->job}}</p>
-              <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        @endforeach
-
-    </div>
-  </section>
   <section class="probootstrap-section probootstrap-bg probootstrap-section-colored probootstrap-testimonial" style="background-image: url({{ url('frontend/enlight-master/img/slider_4.jpg') }});">
     <div class="container">
       <div class="row">

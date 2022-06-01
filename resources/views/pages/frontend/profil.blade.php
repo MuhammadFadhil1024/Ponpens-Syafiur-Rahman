@@ -61,7 +61,7 @@
 
       <div class="row">
         <div class="col-md-12  text-center section-heading probootstrap-animate">
-          <h3>Visi</h3>
+          <h3>Misi</h3>
           <p class="lead">1. Menyelenggarakan Pendidikan dan Pengajaran berbasis Pondok Pesantren secara profesional, berkualitas, dan mandiri.</p>
           <p class="lead">2. Mengembangkan keilmuan dan pengetahuan berlandaskan Al-Qur’an dan Al-Hadits, menyebarluaskan dan sekaligus mentransform peserta didik agar memiliki akhlakul karimah.</p>
           <p class="lead">3. Menyiapkan peserta didik sebagai sarjana yang siap kerja, mandiri, dan berkepribadian.</p>
@@ -94,10 +94,7 @@
                     <h6>{{$pengasuh->name}}</h6>
                     <h5>{{$pengasuh->job}}</h5>
                     <ul class="probootstrap-footer-social">
-                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                        <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                        <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                        <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                        <li class="whatsapp"><a href="#"><i class="icon-whatsapp"></i></a></li>
                     </ul>
                     </div>
                 </div>
@@ -130,10 +127,7 @@
               <h6>{{$binkon->name}}</h6>
               <h5>{{$binkon->job}}</h5>
               <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li class="whatsapp"><a href="#"><i class="icon-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>
@@ -165,10 +159,7 @@
               <h6>{{$guru->name}}</h6>
               <h5>{{$guru->job}}</h5>
               <ul class="probootstrap-footer-social">
-                <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
+                <li class="whatsapp"><a href="#"><i class="icon-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>
