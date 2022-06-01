@@ -31,7 +31,7 @@
                       <img src="{{ Storage::url($article->link) }}" class="img-responsive" alt="reviews2">
                       <div class="content-main single-post padDiv">
                         <div class="journal-txt">
-                          <h4></h4>
+                          <h4>{{$article->title}}</h4>
                         </div>
                         <div class="post-meta">
                           <ul class="list-unstyled mb-0">

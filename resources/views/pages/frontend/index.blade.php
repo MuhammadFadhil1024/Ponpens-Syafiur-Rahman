@@ -37,8 +37,8 @@
           <div class="probootstrap-flex-block">
             <div class="probootstrap-text probootstrap-animate">
               <h3>Tentang Pondok Pesantren</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
-              <p><a href="#" class="btn btn-primary">Learn More</a></p>
+              <p>PM Syafi'ur Rohman berkomitmen mendidik karakter bangsa melalui pendidikan yang berbasis agama demi menciptakan generasi penerus bangsa dari kalangan mahasiswa yang profesional, religius, serta berdaya juang tinggi.</p>
+              <p><a href="{{ url('profil') }}" class="btn btn-primary">Baca Selengkapnya</a></p>
             </div>
             <div class="probootstrap-image probootstrap-animate" style="background-image: url({{ url('frontend/enlight-master/img/slider_3.jpg') }})">
               <iframe src="https://www.youtube.com/embed/5lGzHr1lhgw" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
