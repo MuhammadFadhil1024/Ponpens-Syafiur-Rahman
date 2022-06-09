@@ -78,7 +78,7 @@ class AlumniController extends Controller
             ]);
         }
 
-        return redirect()->route('dashboard.alumni.index');
+        return redirect()->route('dashboard.alumni.index')->with('success', "Tetimoni baru berhasil ditambah. ");
     }
 
     /**
@@ -100,7 +100,7 @@ class AlumniController extends Controller
      */
     public function edit(Alumni $alumni)
     {
-       //
+        //
     }
 
     /**
@@ -127,6 +127,6 @@ class AlumniController extends Controller
 
         $alumnus->delete();
 
-        return redirect()->route('dashboard.alumni.index');
+        return redirect()->route('dashboard.alumni.index')->with('delete', "Testimoni berhasil dihapus. ");
     }
 }
