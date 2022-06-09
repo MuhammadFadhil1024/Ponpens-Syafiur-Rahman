@@ -41,7 +41,7 @@
               <p><a href="{{ url('profil') }}" class="btn btn-primary">Baca Selengkapnya</a></p>
             </div>
             <div class="probootstrap-image probootstrap-animate" style="background-image: url({{ url('frontend/enlight-master/img/slider_3.jpg') }})">
-              <iframe src="https://www.youtube.com/embed/5lGzHr1lhgw" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
+              <iframe src="https://www.youtube.com/embed/5BR62bxwIIA" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="probootstrap-text">
               <span class="probootstrap-counter">
-                <span class="js-counter" data-from="0" data-to="20203" data-speed="5000" data-refresh-interval="50">1</span>
+                <span class="js-counter" data-from="0" data-to="258" data-speed="5000" data-refresh-interval="50">1</span>
               </span>
               <span class="probootstrap-counter-label">Santri PPM SR</span>
             </div>
@@ -73,7 +73,7 @@
             </div>
             <div class="probootstrap-text">
               <span class="probootstrap-counter">
-                <span class="js-counter" data-from="0" data-to="139" data-speed="5000" data-refresh-interval="50">1</span>
+                <span class="js-counter" data-from="0" data-to="50" data-speed="5000" data-refresh-interval="50">1</span>
               </span>
               <span class="probootstrap-counter-label">Pengasuh Pondok</span>
             </div>
@@ -87,9 +87,9 @@
             </div>
             <div class="probootstrap-text">
               <span class="probootstrap-counter">
-                <span class="js-counter" data-from="0" data-to="99" data-speed="5000" data-refresh-interval="50">1</span>%
+                <span class="js-counter" data-from="0" data-to="25" data-speed="5000" data-refresh-interval="50">1</span>
               </span>
-              <span class="probootstrap-counter-label">Passing to Universities</span>
+              <span class="probootstrap-counter-label">Asal Daerah</span>
             </div>
           </div>
         </div>

@@ -21,10 +21,10 @@
               <div class="text-uppercase probootstrap-uppercase">History</div>
               <h3>Sejarah PPM Syafi'ur Rohman</h3>
               <p>PPM Syafi'ur Rohman berkomitmen mendidik karakter bangsa melalui pendidikan yang berbasis agama demi menciptakan generasi penerus bangsa dari kalangan mahasiswa yang profesional, religius, serta berdaya juang tinggi.</p>
-              <p><a href="#" class="btn btn-primary">Learn More</a></p>
+              {{-- <p><a href="#" class="btn btn-primary">Learn More</a></p> --}}
             </div>
             <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_4.jpg)">
-              <iframe src="https://www.youtube.com/embed/5lGzHr1lhgw" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
+              <iframe src="https://www.youtube.com/embed/5BR62bxwIIA" frameborder="0" class="btn-video popup-vimeo"><i class="icon-play3"></i></iframe>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
           <h2>Pengasuh Pondok Pesantren</h2>
-          <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+          {{-- <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p> --}}
         </div>
       </div>
       <!-- END row -->
@@ -111,7 +111,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
           <h2>Bimbingan Konseling Pondok Pesantren</h2>
-          <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+          {{-- <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p> --}}
         </div>
       </div>
       <!-- END row -->
@@ -143,7 +143,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
           <h2>Dewan Guru Pondok Pesantren</h2>
-          <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+          {{-- <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p> --}}
         </div>
       </div>
       <!-- END row -->
@@ -195,7 +195,7 @@
 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p><a href="{{route('fasilitas')}}" class="btn btn-primary">Lihat semua fasilitas</a></p>
+        <p><a href="{{route('fasilitas')}}" class="btn btn-primary">Lihat Semua Fasilitas</a></p>
       </div>
     </div>
   </section>
