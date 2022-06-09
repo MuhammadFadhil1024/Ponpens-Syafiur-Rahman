@@ -73,7 +73,7 @@ class EventGalleryController extends Controller
             }
         }
 
-        return redirect()->route('dashboard.event.eventgallery.index', $event->id);
+        return redirect()->route('dashboard.event.eventgallery.index', $event->id)->with('success', "Foto event berhasil ditambah. ");
     }
 
     /**
@@ -120,6 +120,6 @@ class EventGalleryController extends Controller
     {
         $eventgallery->delete();
 
-        return redirect()->route('dashboard.event.eventgallery.index', $eventgallery->events_id);
+        return redirect()->route('dashboard.event.eventgallery.index', $eventgallery->events_id)->with('delete', "Foto event berhasil dihapus. ");
     }
 }

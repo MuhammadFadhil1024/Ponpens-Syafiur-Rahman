@@ -73,7 +73,7 @@ class DivisionController extends Controller
         $data['slug'] = Str::slug($request->name);
         Division::create($data);
 
-        return redirect()->route('dashboard.division.index');
+        return redirect()->route('dashboard.division.index')->with('success', "Divisi baru berhasil ditambah. ");
     }
 
     /**
@@ -115,7 +115,7 @@ class DivisionController extends Controller
 
         $division->update($data);
 
-        return redirect()->route('dashboard.division.index');
+        return redirect()->route('dashboard.division.index')->with('success', "Divisi berhasil dirubah. ");
     }
 
     /**
@@ -128,6 +128,6 @@ class DivisionController extends Controller
     {
         $division->delete();
 
-        return redirect()->route('dashboard.division.index');
+        return redirect()->route('dashboard.division.index')->with('delete', "Divisi berhasil dihapus. ");
     }
 }

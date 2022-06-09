@@ -72,7 +72,7 @@ class FacilityGalleryController extends Controller
             }
         }
 
-        return redirect()->route('dashboard.facility.facilitygallery.index', $facility->id);
+        return redirect()->route('dashboard.facility.facilitygallery.index', $facility->id)->with('success', "Foto fasilitas berhasil ditambah. ");
     }
 
     /**
@@ -119,6 +119,6 @@ class FacilityGalleryController extends Controller
     {
         $facilitygallery->delete();
 
-        return redirect()->route('dashboard.facility.facilitygallery.index', $facilitygallery->facilitys_id);
+        return redirect()->route('dashboard.facility.facilitygallery.index', $facilitygallery->facilitys_id)->with('delete', "Foto fasilitas berhasil dihapus. ");
     }
 }

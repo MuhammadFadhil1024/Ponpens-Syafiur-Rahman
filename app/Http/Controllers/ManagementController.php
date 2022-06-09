@@ -76,7 +76,7 @@ class ManagementController extends Controller
                 'url' => $path,
             ]);
         }
-        return redirect()->route('dashboard.management.index');
+        return redirect()->route('dashboard.management.index')->with('success', "Pengurus baru berhasil ditambah. ");
     }
 
     /**
@@ -145,7 +145,7 @@ class ManagementController extends Controller
 
             $management->save();
         }
-        return redirect()->route('dashboard.management.index');
+        return redirect()->route('dashboard.management.index')->with('success', "Pengurus berhasil dirubah. ");
     }
 
     /**
@@ -158,6 +158,6 @@ class ManagementController extends Controller
     {
         $management->delete();
 
-        return redirect()->route('dashboard.management.index');
+        return redirect()->route('dashboard.management.index')->with('delete', "Pengurus berhasil dihapus. ");
     }
 }

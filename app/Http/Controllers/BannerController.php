@@ -73,7 +73,7 @@ class BannerController extends Controller
             ]);
         }
 
-        return redirect()->route('dashboard.banner.index');
+        return redirect()->route('dashboard.banner.index')->with('success', "Foto banner berhasil di tambah. ");
     }
 
     /**
@@ -120,6 +120,6 @@ class BannerController extends Controller
     {
         $banner->delete();
 
-        return redirect()->route('dashboard.banner.index');
+        return redirect()->route('dashboard.banner.index')->with('delete', "Foto banner berhasil dihapus. ");
     }
 }
