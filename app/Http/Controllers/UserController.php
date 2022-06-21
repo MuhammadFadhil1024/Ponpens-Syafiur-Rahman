@@ -101,7 +101,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect()->route('dashboard.user.index');
+        return redirect()->route('dashboard.user.index')->with('success', "Hak akses user berhasil dirubah. ");
     }
 
     /**
@@ -113,6 +113,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('dashboard.user.index');
+        return redirect()->route('dashboard.user.index')->with('delete', "User berhasil dihapus. ");
     }
 }

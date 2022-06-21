@@ -68,7 +68,7 @@ class FacilityController extends Controller
 
         Facility::create($data);
 
-        return redirect()->route('dashboard.facility.index');
+        return redirect()->route('dashboard.facility.index')->with('success', "Fasilitas baru berhasil ditambah. ");
     }
 
     /**
@@ -109,7 +109,7 @@ class FacilityController extends Controller
 
         $facility->update($data);
 
-        return redirect()->route('dashboard.facility.index');
+        return redirect()->route('dashboard.facility.index')->with('success', "Fasilitas berhasil dirubah. ");
     }
 
     /**
@@ -122,6 +122,6 @@ class FacilityController extends Controller
     {
         $facility->delete();
 
-        return redirect()->route('dashboard.facility.index');
+        return redirect()->route('dashboard.facility.index')->with('delete', "Fasilitas berhasil dihapus. ");
     }
 }

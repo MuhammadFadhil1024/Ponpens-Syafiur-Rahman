@@ -65,7 +65,7 @@ class DivisionTeamController extends Controller
             'position' => $request->position
         ]);
 
-        return redirect()->route('dashboard.division.divisionteam.index', $division->id);
+        return redirect()->route('dashboard.division.divisionteam.index', $division->id)->with('success', "Anggota divisi berhasil ditambah. ");
     }
 
     /**
@@ -112,6 +112,6 @@ class DivisionTeamController extends Controller
     {
         $divisionteam->delete();
 
-        return redirect()->route('dashboard.division.divisionteam.index', $divisionteam->divisions_id);
+        return redirect()->route('dashboard.division.divisionteam.index', $divisionteam->divisions_id)->with('delete', "Anggota divisi berhasil dihapus. ");
     }
 }

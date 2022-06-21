@@ -80,7 +80,7 @@ class EventController extends Controller
             'slug' => $slug
         ]);
 
-        return redirect()->route('dashboard.event.index');
+        return redirect()->route('dashboard.event.index')->with('success', "Event baru berhasil ditambah. ");
     }
 
     /**
@@ -132,7 +132,7 @@ class EventController extends Controller
 
         $event->save();
 
-        return redirect()->route('dashboard.event.index');
+        return redirect()->route('dashboard.event.index')->with('success', "Event berhasil dirubah. ");
     }
 
     /**
@@ -145,6 +145,6 @@ class EventController extends Controller
     {
         $event->delete();
 
-        return redirect()->route('dashboard.event.index');
+        return redirect()->route('dashboard.event.index')->with('delete', "Event berhasil dihapus. ");
     }
 }
