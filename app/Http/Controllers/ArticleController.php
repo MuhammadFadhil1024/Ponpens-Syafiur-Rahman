@@ -89,7 +89,7 @@ class ArticleController extends Controller
                 'slug' => $slug
             ]);
         }
-        return redirect()->route('dashboard.article.index');
+        return redirect()->route('dashboard.article.index')->with('success', "Artikel baru berhasil ditambah. ");
     }
 
     /**
@@ -160,7 +160,7 @@ class ArticleController extends Controller
 
             $article->save();
         }
-        return redirect()->route('dashboard.article.index');
+        return redirect()->route('dashboard.article.index')->with('success', "Artikel berhasil dirubah. ");
     }
 
     /**
@@ -173,6 +173,6 @@ class ArticleController extends Controller
     {
         $article->delete();
 
-        return redirect()->route('dashboard.article.index');
+        return redirect()->route('dashboard.article.index')->with('delete', "Artikel berhasil dihapus. ");
     }
 }
