@@ -170,7 +170,7 @@
     </div>
   </section>
 
-  <section class="probootstrap-section">
+  {{-- <section class="probootstrap-section">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
@@ -198,7 +198,7 @@
         <p><a href="{{route('fasilitas')}}" class="btn btn-primary">Lihat Semua Fasilitas</a></p>
       </div>
     </div>
-  </section>
+  </section> --}}
 
 
 @endsection

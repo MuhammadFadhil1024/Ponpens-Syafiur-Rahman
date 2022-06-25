@@ -4,7 +4,7 @@
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
             <h3>Tentang PPM Syafi'ur Rohman</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+            <p>PM Syafi'ur Rohman berkomitmen mendidik karakter bangsa melalui pendidikan yang berbasis agama demi menciptakan generasi penerus bangsa dari kalangan mahasiswa yang profesional, religius, serta berdaya juang tinggi.</p>
             <h3>Media Sosial</h3>
             <ul class="probootstrap-footer-social">
               <li><a href="#"><i class="icon-whatsapp"></i></a></li>

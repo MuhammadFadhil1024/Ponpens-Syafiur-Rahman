@@ -28,9 +28,9 @@
                     <x-jet-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                         {{ __('User') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard.facility.index') }}" :active="request()->routeIs('dashboard.facility.index')">
+                    {{-- <x-jet-nav-link href="{{ route('dashboard.facility.index') }}" :active="request()->routeIs('dashboard.facility.index')">
                         {{ __('Fasilitas') }}
-                    </x-jet-nav-link>
+                    </x-jet-nav-link> --}}
                     <x-jet-nav-link href="{{ route('dashboard.management.index') }}" :active="request()->routeIs('dashboard.management.index')">
                         {{ __('Pengurus') }}
                     </x-jet-nav-link>
