@@ -101,7 +101,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect()->route('dashboard.user.index')->with('success', "Hak akses user berhasil dirubah. ");
+        return redirect()->route('dashboard.user.index')->with('success', " Data user berhasil dirubah. ");
     }
 
     /**

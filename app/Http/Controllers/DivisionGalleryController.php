@@ -72,7 +72,7 @@ class DivisionGalleryController extends Controller
             }
         }
 
-        return redirect()->route('dashboard.division.divisiongallery.index', $division->id)->with('success', "Foto anggota divisi berhasil ditambah. ");
+        return redirect()->route('dashboard.division.divisiongallery.index', $division->id)->with('success', "Foto divisi berhasil ditambah. ");
     }
 
     /**
@@ -119,6 +119,6 @@ class DivisionGalleryController extends Controller
     {
         $divisiongallery->delete();
 
-        return redirect()->route('dashboard.division.divisiongallery.index', $divisiongallery->divisions_id)->with('delete', "Foto anggota divisi berhasil dihapus. ");
+        return redirect()->route('dashboard.division.divisiongallery.index', $divisiongallery->divisions_id)->with('delete', "Foto divisi berhasil dihapus. ");
     }
 }
