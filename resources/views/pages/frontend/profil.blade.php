@@ -42,8 +42,7 @@
       </div>
       <div class="col-md-6 col-md-push-1">
         <h2>PPM Syafi'ur Rohman</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
-        <p>Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+        <p>Pondok Pesantren Mahasiswa (PPM) Syafi’ur Rohman Kabupaten Jember adalah lembaga pendidikan dan pengajaran berbasis agama Islam. Lembaga layanan pendidikan dan pengajaran ini berada dibawah Yayasan Al-Manshurin, yang bergerak dibidang pendidikan umum dan pondok pesantren. Yayasan ini dalam operasionalnya menangani pendirian sarana dan prasarana pendidikan formal dan non formal dari pra sekolah sampai dengan Perguruan Tinggi maupun profesi. Secara resmi, Lembaga PPM Syafi’ur Rohman Kabupaten Jember  berdiri pada hari Senin tanggal 10 Mei 2010.</p>
       </div>
     </div>
   </section>
